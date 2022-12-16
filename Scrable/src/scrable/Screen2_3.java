@@ -8,12 +8,12 @@ package scrable;
  *
  * @author gabrielavk
  */
-public class Screen_2 extends javax.swing.JFrame {
+public class Screen2_3 extends javax.swing.JFrame {
 
     /**
-     * Creates new form Screen_2
+     * Creates new form Screen2_3
      */
-    public Screen_2() {
+    public Screen2_3() {
         initComponents();
     }
 
@@ -33,12 +33,17 @@ public class Screen_2 extends javax.swing.JFrame {
         btnOk1 = new javax.swing.JButton();
         lblWarning1 = new javax.swing.JLabel();
         lblInstruction = new javax.swing.JLabel();
+        btnContinue = new javax.swing.JButton();
+        pnlPlayer3 = new javax.swing.JPanel();
+        lblPlayer3 = new javax.swing.JLabel();
+        txtPlayer3Name = new javax.swing.JTextField();
+        btnOk3 = new javax.swing.JButton();
+        lblWarning3 = new javax.swing.JLabel();
         pnlPlayer2 = new javax.swing.JPanel();
-        lblPlayer2Name = new javax.swing.JLabel();
+        lblPlayer2 = new javax.swing.JLabel();
         txtPlayer2Name = new javax.swing.JTextField();
         btnOk2 = new javax.swing.JButton();
         lblWarning2 = new javax.swing.JLabel();
-        btnContinue = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -68,29 +73,29 @@ public class Screen_2 extends javax.swing.JFrame {
         pnlPlayer1Layout.setHorizontalGroup(
             pnlPlayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlPlayer1Layout.createSequentialGroup()
-                .addGap(126, 126, 126)
-                .addComponent(btnOk1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(129, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlPlayer1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(30, Short.MAX_VALUE)
                 .addGroup(pnlPlayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(txtPlayer1Name)
                     .addComponent(lblPlayer1, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE)
-                    .addComponent(lblWarning1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblWarning1, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30))
+            .addGroup(pnlPlayer1Layout.createSequentialGroup()
+                .addGap(137, 137, 137)
+                .addComponent(btnOk1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnlPlayer1Layout.setVerticalGroup(
             pnlPlayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlPlayer1Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(lblPlayer1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtPlayer1Name, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(lblPlayer1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblWarning1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16)
-                .addComponent(btnOk1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(133, Short.MAX_VALUE))
+                .addComponent(txtPlayer1Name, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(4, 4, 4)
+                .addComponent(lblWarning1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnOk1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         lblInstruction.setFont(new java.awt.Font("Times New Roman", 1, 25)); // NOI18N
@@ -98,14 +103,65 @@ public class Screen_2 extends javax.swing.JFrame {
         lblInstruction.setText("Моля въведете потребителските си имена в полетата по-долу."); // NOI18N
         lblInstruction.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
+        btnContinue.setBackground(new java.awt.Color(137, 102, 163));
+        btnContinue.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        btnContinue.setText("Продължи");
+
+        pnlPlayer3.setBackground(new java.awt.Color(209, 188, 226));
+        pnlPlayer3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+
+        lblPlayer3.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        lblPlayer3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblPlayer3.setText("Играч 3");
+        lblPlayer3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        txtPlayer3Name.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+
+        btnOk3.setBackground(new java.awt.Color(137, 102, 163));
+        btnOk3.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        btnOk3.setText("ОК");
+
+        lblWarning3.setForeground(new java.awt.Color(255, 51, 51));
+        lblWarning3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblWarning3.setText("Не могат да се използват символите: /, @, ~, _ , -, $.");
+
+        javax.swing.GroupLayout pnlPlayer3Layout = new javax.swing.GroupLayout(pnlPlayer3);
+        pnlPlayer3.setLayout(pnlPlayer3Layout);
+        pnlPlayer3Layout.setHorizontalGroup(
+            pnlPlayer3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlPlayer3Layout.createSequentialGroup()
+                .addContainerGap(30, Short.MAX_VALUE)
+                .addGroup(pnlPlayer3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(txtPlayer3Name)
+                    .addComponent(lblPlayer3, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE)
+                    .addComponent(lblWarning3, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30))
+            .addGroup(pnlPlayer3Layout.createSequentialGroup()
+                .addGap(137, 137, 137)
+                .addComponent(btnOk3, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        pnlPlayer3Layout.setVerticalGroup(
+            pnlPlayer3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlPlayer3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblPlayer3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtPlayer3Name, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(4, 4, 4)
+                .addComponent(lblWarning3, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnOk3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
         pnlPlayer2.setBackground(new java.awt.Color(209, 188, 226));
         pnlPlayer2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        pnlPlayer2.setPreferredSize(new java.awt.Dimension(363, 400));
 
-        lblPlayer2Name.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        lblPlayer2Name.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblPlayer2Name.setText("Играч 2");
-        lblPlayer2Name.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        lblPlayer2.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        lblPlayer2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblPlayer2.setText("Играч 2");
+        lblPlayer2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         txtPlayer2Name.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
 
@@ -122,36 +178,30 @@ public class Screen_2 extends javax.swing.JFrame {
         pnlPlayer2Layout.setHorizontalGroup(
             pnlPlayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlPlayer2Layout.createSequentialGroup()
-                .addGroup(pnlPlayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlPlayer2Layout.createSequentialGroup()
-                        .addGap(127, 127, 127)
-                        .addComponent(btnOk2, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pnlPlayer2Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addGroup(pnlPlayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblWarning2, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(pnlPlayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtPlayer2Name)
-                                .addComponent(lblPlayer2Name, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE)))))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE)
+                .addGroup(pnlPlayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(txtPlayer2Name)
+                    .addComponent(lblPlayer2, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE)
+                    .addComponent(lblWarning2, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30))
+            .addGroup(pnlPlayer2Layout.createSequentialGroup()
+                .addGap(137, 137, 137)
+                .addComponent(btnOk2, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnlPlayer2Layout.setVerticalGroup(
             pnlPlayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlPlayer2Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(lblPlayer2Name, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtPlayer2Name, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(lblPlayer2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblWarning2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17)
-                .addComponent(btnOk2, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(132, Short.MAX_VALUE))
+                .addComponent(txtPlayer2Name, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(4, 4, 4)
+                .addComponent(lblWarning2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnOk2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        btnContinue.setBackground(new java.awt.Color(137, 102, 163));
-        btnContinue.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        btnContinue.setText("Продължи");
 
         javax.swing.GroupLayout pnlScreen2_2Layout = new javax.swing.GroupLayout(pnlScreen2_2);
         pnlScreen2_2.setLayout(pnlScreen2_2Layout);
@@ -160,30 +210,36 @@ public class Screen_2 extends javax.swing.JFrame {
             .addGroup(pnlScreen2_2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnlScreen2_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblInstruction, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(pnlScreen2_2Layout.createSequentialGroup()
                         .addComponent(pnlPlayer1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(14, 14, 14)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(pnlPlayer2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(pnlScreen2_2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnContinue, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(43, 43, 43)))
+                        .addGap(0, 2, Short.MAX_VALUE))
+                    .addComponent(lblInstruction, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
+            .addGroup(pnlScreen2_2Layout.createSequentialGroup()
+                .addGap(199, 199, 199)
+                .addComponent(pnlPlayer3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlScreen2_2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnContinue, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(39, 39, 39))
         );
         pnlScreen2_2Layout.setVerticalGroup(
             pnlScreen2_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlScreen2_2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblInstruction, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlScreen2_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pnlPlayer1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pnlPlayer2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pnlScreen2_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(pnlPlayer1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnlPlayer2, javax.swing.GroupLayout.DEFAULT_SIZE, 402, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(pnlPlayer3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(btnContinue, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -217,20 +273,20 @@ public class Screen_2 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Screen_2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Screen2_3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Screen_2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Screen2_3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Screen_2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Screen2_3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Screen_2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Screen2_3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Screen_2().setVisible(true);
+                new Screen2_3().setVisible(true);
             }
         });
     }
@@ -239,15 +295,20 @@ public class Screen_2 extends javax.swing.JFrame {
     private javax.swing.JButton btnContinue;
     private javax.swing.JButton btnOk1;
     private javax.swing.JButton btnOk2;
+    private javax.swing.JButton btnOk3;
     private javax.swing.JLabel lblInstruction;
     private javax.swing.JLabel lblPlayer1;
-    private javax.swing.JLabel lblPlayer2Name;
+    private javax.swing.JLabel lblPlayer2;
+    private javax.swing.JLabel lblPlayer3;
     private javax.swing.JLabel lblWarning1;
     private javax.swing.JLabel lblWarning2;
+    private javax.swing.JLabel lblWarning3;
     private javax.swing.JPanel pnlPlayer1;
     private javax.swing.JPanel pnlPlayer2;
+    private javax.swing.JPanel pnlPlayer3;
     private javax.swing.JPanel pnlScreen2_2;
     private javax.swing.JTextField txtPlayer1Name;
     private javax.swing.JTextField txtPlayer2Name;
+    private javax.swing.JTextField txtPlayer3Name;
     // End of variables declaration//GEN-END:variables
 }
