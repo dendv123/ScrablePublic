@@ -1,13 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package scrable;
-
-/**
- *
- * @author gabrielavk
- */
 public class Screen2_2 extends javax.swing.JFrame {
 
     /**
@@ -15,6 +6,8 @@ public class Screen2_2 extends javax.swing.JFrame {
      */
     public Screen2_2() {
         initComponents();
+        lblWarning1.setVisible(false);
+        lblWarning2.setVisible(false);
     }
 
     /**
@@ -58,6 +51,11 @@ public class Screen2_2 extends javax.swing.JFrame {
         btnOk1.setBackground(new java.awt.Color(137, 102, 163));
         btnOk1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btnOk1.setText("ОК");
+        btnOk1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOk1ActionPerformed(evt);
+            }
+        });
 
         lblWarning1.setForeground(new java.awt.Color(255, 51, 51));
         lblWarning1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -108,10 +106,20 @@ public class Screen2_2 extends javax.swing.JFrame {
         lblPlayer2Name.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         txtPlayer2Name.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        txtPlayer2Name.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPlayer2NameActionPerformed(evt);
+            }
+        });
 
         btnOk2.setBackground(new java.awt.Color(137, 102, 163));
         btnOk2.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btnOk2.setText("ОК");
+        btnOk2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOk2ActionPerformed(evt);
+            }
+        });
 
         lblWarning2.setForeground(new java.awt.Color(255, 51, 51));
         lblWarning2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -152,6 +160,11 @@ public class Screen2_2 extends javax.swing.JFrame {
         btnContinue.setBackground(new java.awt.Color(137, 102, 163));
         btnContinue.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btnContinue.setText("Продължи");
+        btnContinue.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnContinueActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnlScreen2_2Layout = new javax.swing.GroupLayout(pnlScreen2_2);
         pnlScreen2_2.setLayout(pnlScreen2_2Layout);
@@ -199,6 +212,42 @@ public class Screen2_2 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtPlayer2NameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPlayer2NameActionPerformed
+        
+        
+    }//GEN-LAST:event_txtPlayer2NameActionPerformed
+
+    private void btnOk1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOk1ActionPerformed
+        if (!Screen2.setUsername(txtPlayer1Name.getText()))
+        {
+            lblWarning1.setVisible(true);
+        }
+        else
+        {
+            txtPlayer1Name.enable(false);
+            btnOk1.setVisible(false);
+            Screen2.importUsername(txtPlayer1Name.getText());
+        }
+    }//GEN-LAST:event_btnOk1ActionPerformed
+
+    private void btnOk2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOk2ActionPerformed
+        if (!Screen2.setUsername(txtPlayer2Name.getText()))
+        {
+            lblWarning1.setVisible(true);
+        }
+        else
+        {
+            txtPlayer2Name.enable(false);
+            btnOk2.setVisible(false);
+            Screen2.importUsername(txtPlayer2Name.getText());
+        }
+    }//GEN-LAST:event_btnOk2ActionPerformed
+
+    private void btnContinueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContinueActionPerformed
+       dispose();
+      // new Screen3_2().setVisible(true);
+    }//GEN-LAST:event_btnContinueActionPerformed
 
     /**
      * @param args the command line arguments
