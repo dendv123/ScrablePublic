@@ -1,6 +1,7 @@
 package scrable;
 public class Screen2_2 extends javax.swing.JFrame {
 
+    
     /**
      * Creates new form Screen_2
      */
@@ -227,7 +228,6 @@ public class Screen2_2 extends javax.swing.JFrame {
         {
             txtPlayer1Name.enable(false);
             btnOk1.setVisible(false);
-            Screen2.importUsername(txtPlayer1Name.getText());
         }
     }//GEN-LAST:event_btnOk1ActionPerformed
 
@@ -240,19 +240,21 @@ public class Screen2_2 extends javax.swing.JFrame {
         {
             txtPlayer2Name.enable(false);
             btnOk2.setVisible(false);
-            Screen2.importUsername(txtPlayer2Name.getText());
         }
     }//GEN-LAST:event_btnOk2ActionPerformed
 
     private void btnContinueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContinueActionPerformed
        dispose();
+       Screen2 OBJ=new Screen2();
+               
+            OBJ.importUsername(txtPlayer1Name.getText() + "\n" + txtPlayer2Name.getText());
       // new Screen3_2().setVisible(true);
     }//GEN-LAST:event_btnContinueActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public static void Run() {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
