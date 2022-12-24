@@ -29,11 +29,6 @@ public class Screen_1 extends javax.swing.JFrame {
         pnlScreen_1 = new javax.swing.JPanel();
         pnlWelcome = new javax.swing.JPanel();
         lblWelcome = new javax.swing.JLabel();
-        lblPlayers = new javax.swing.JLabel();
-        pnl3players = new javax.swing.JPanel();
-        btn3players = new javax.swing.JButton();
-        pnl4players = new javax.swing.JPanel();
-        btn4players = new javax.swing.JButton();
         pnl2players = new javax.swing.JPanel();
         btn2Players = new javax.swing.JButton();
 
@@ -41,6 +36,7 @@ public class Screen_1 extends javax.swing.JFrame {
 
         pnlScreen_1.setBackground(new java.awt.Color(209, 188, 226));
         pnlScreen_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        pnlScreen_1.setPreferredSize(new java.awt.Dimension(500, 632));
 
         pnlWelcome.setBackground(new java.awt.Color(209, 188, 226));
         pnlWelcome.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
@@ -49,83 +45,31 @@ public class Screen_1 extends javax.swing.JFrame {
         lblWelcome.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblWelcome.setText("Добре дошли!");
 
-        lblPlayers.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
-        lblPlayers.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblPlayers.setText("Колко хора ще играят?");
-
         javax.swing.GroupLayout pnlWelcomeLayout = new javax.swing.GroupLayout(pnlWelcome);
         pnlWelcome.setLayout(pnlWelcomeLayout);
         pnlWelcomeLayout.setHorizontalGroup(
             pnlWelcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlWelcomeLayout.createSequentialGroup()
-                .addGap(124, 124, 124)
+                .addGap(34, 34, 34)
                 .addComponent(lblWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, 482, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlWelcomeLayout.createSequentialGroup()
-                .addContainerGap(100, Short.MAX_VALUE)
-                .addComponent(lblPlayers, javax.swing.GroupLayout.PREFERRED_SIZE, 537, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(87, 87, 87))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
         pnlWelcomeLayout.setVerticalGroup(
             pnlWelcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlWelcomeLayout.createSequentialGroup()
-                .addGap(19, 19, 19)
+                .addGap(33, 33, 33)
                 .addComponent(lblWelcome)
-                .addGap(26, 26, 26)
-                .addComponent(lblPlayers, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(31, Short.MAX_VALUE))
-        );
-
-        pnl3players.setBackground(new java.awt.Color(211, 189, 228));
-
-        btn3players.setBackground(new java.awt.Color(137, 102, 163));
-        btn3players.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
-        btn3players.setText("Трима играчи");
-        btn3players.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-
-        javax.swing.GroupLayout pnl3playersLayout = new javax.swing.GroupLayout(pnl3players);
-        pnl3players.setLayout(pnl3playersLayout);
-        pnl3playersLayout.setHorizontalGroup(
-            pnl3playersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btn3players, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        pnl3playersLayout.setVerticalGroup(
-            pnl3playersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btn3players, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-
-        pnl4players.setBackground(new java.awt.Color(211, 189, 228));
-
-        btn4players.setBackground(new java.awt.Color(137, 102, 163));
-        btn4players.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
-        btn4players.setText("Четирима играчи");
-        btn4players.setActionCommand("Четирима играчи");
-        btn4players.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        btn4players.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn4playersActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout pnl4playersLayout = new javax.swing.GroupLayout(pnl4players);
-        pnl4players.setLayout(pnl4playersLayout);
-        pnl4playersLayout.setHorizontalGroup(
-            pnl4playersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btn4players, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        pnl4playersLayout.setVerticalGroup(
-            pnl4playersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btn4players, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
         pnl2players.setBackground(new java.awt.Color(209, 188, 226));
 
         btn2Players.setBackground(new java.awt.Color(137, 102, 163));
         btn2Players.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
-        btn2Players.setText("Двама играчи");
+        btn2Players.setText("Начало на нова игра");
         btn2Players.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         btn2Players.setBorderPainted(false);
-        btn2Players.setPreferredSize(new java.awt.Dimension(507, 70));
+        btn2Players.setPreferredSize(new java.awt.Dimension(400, 200));
         btn2Players.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn2PlayersActionPerformed(evt);
@@ -136,11 +80,13 @@ public class Screen_1 extends javax.swing.JFrame {
         pnl2players.setLayout(pnl2playersLayout);
         pnl2playersLayout.setHorizontalGroup(
             pnl2playersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btn2Players, javax.swing.GroupLayout.DEFAULT_SIZE, 537, Short.MAX_VALUE)
+            .addComponent(btn2Players, javax.swing.GroupLayout.DEFAULT_SIZE, 499, Short.MAX_VALUE)
         );
         pnl2playersLayout.setVerticalGroup(
             pnl2playersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btn2Players, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addGroup(pnl2playersLayout.createSequentialGroup()
+                .addComponent(btn2Players, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout pnlScreen_1Layout = new javax.swing.GroupLayout(pnlScreen_1);
@@ -151,49 +97,38 @@ public class Screen_1 extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(pnlWelcome, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlScreen_1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(pnlScreen_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(pnl4players, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnl3players, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnl2players, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(97, 97, 97))
+            .addGroup(pnlScreen_1Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(pnl2players, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnlScreen_1Layout.setVerticalGroup(
             pnlScreen_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlScreen_1Layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(pnlWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(36, 36, 36)
                 .addComponent(pnl2players, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
-                .addComponent(pnl3players, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
-                .addComponent(pnl4players, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlScreen_1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlScreen_1, javax.swing.GroupLayout.DEFAULT_SIZE, 585, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlScreen_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(pnlScreen_1, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn2PlayersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2PlayersActionPerformed
-        // TODO add your handling code here:
+        this.dispose();
+        new Screen2_2().setVisible(true);
     }//GEN-LAST:event_btn2PlayersActionPerformed
-
-    private void btn4playersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4playersActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn4playersActionPerformed
 
     /**
      * @param args the command line arguments
@@ -232,13 +167,8 @@ public class Screen_1 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn2Players;
-    private javax.swing.JButton btn3players;
-    private javax.swing.JButton btn4players;
-    private javax.swing.JLabel lblPlayers;
     private javax.swing.JLabel lblWelcome;
     private javax.swing.JPanel pnl2players;
-    private javax.swing.JPanel pnl3players;
-    private javax.swing.JPanel pnl4players;
     private javax.swing.JPanel pnlScreen_1;
     private javax.swing.JPanel pnlWelcome;
     // End of variables declaration//GEN-END:variables
