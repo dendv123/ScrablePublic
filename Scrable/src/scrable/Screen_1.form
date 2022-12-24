@@ -208,7 +208,6 @@
                   <Font name="Times New Roman" size="36" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x427;&#x435;&#x442;&#x438;&#x440;&#x438;&#x43c;&#x430; &#x438;&#x433;&#x440;&#x430;&#x447;&#x438;"/>
-                <Property name="actionCommand" type="java.lang.String" value="&#x427;&#x435;&#x442;&#x438;&#x440;&#x438;&#x43c;&#x430; &#x438;&#x433;&#x440;&#x430;&#x447;&#x438;"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                     <LineBorder thickness="3"/>
