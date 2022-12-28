@@ -9,6 +9,7 @@ public class Screen2_2 extends javax.swing.JFrame {
         initComponents();
         lblWarning1.setVisible(false);
         lblWarning2.setVisible(false);
+        setTitle("Вход");
     }
 
     /**
@@ -247,7 +248,7 @@ public class Screen2_2 extends javax.swing.JFrame {
        dispose();
        Screen2 OBJ=new Screen2();
                
-            OBJ.importUsername(txtPlayer1Name.getText() + "\n" + txtPlayer2Name.getText());
+            OBJ.importUsername(txtPlayer1Name.getText() + "\n" + txtPlayer2Name.getText() + "\n");
        new Screen3().setVisible(true);
     }//GEN-LAST:event_btnContinueActionPerformed
 

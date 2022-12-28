@@ -1,6 +1,8 @@
 
 package scrable;
 import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
 import javax.swing.*;
 
 public class Screen3 extends javax.swing.JFrame {
@@ -15,13 +17,17 @@ public class Screen3 extends javax.swing.JFrame {
                         10 + i * (getHeight() / 15 - 3 + 3),
                         getHeight() / 15 - 3, 
                         getHeight() / 15 - 3);
-                if (((i == 0 || i == 7 || i == 14)
-                        && (j == 0 || j == 7 || j == 14))){
-                    pnlArr[i][j].setBackground(new Color(184, 15, 10)); // crimson red 
+                if (i == 7 && j == 7)
+                {
+                    pnlArr[7][7].setBackground(new Color (209,188,226)); // purple
                 }
                 else if ((i>=1 && i<=4 || i==7 || i>=10 && i<=13) 
                         && (i==j || (i + j) == 14)){
                     pnlArr[i][j].setBackground(Color.pink);
+                }
+                else if (((i == 0 || i == 7 || i == 14)
+                        && (j == 0 || j == 7 || j == 14))){
+                    pnlArr[i][j].setBackground(new Color(184, 15, 10)); // crimson red 
                 }
                 else if (((i == 1 || i == 5 || i == 9 || i == 13) 
                         && (j == 1 || j == 5 || j == 9 || j == 13)))
@@ -47,11 +53,13 @@ public class Screen3 extends javax.swing.JFrame {
             }
         }
     }
+    
     public Screen3() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
         btnLegend.setVisible(false);
         arr();
+        setTitle("Скрабъл");
     }
 
     /**
