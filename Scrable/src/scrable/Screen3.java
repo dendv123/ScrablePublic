@@ -74,6 +74,32 @@ public class Screen3 extends javax.swing.JFrame {
         pnlFull = new javax.swing.JPanel();
         btnStart = new javax.swing.JButton();
         btnLegend = new javax.swing.JButton();
+        pnlPlayer1 = new javax.swing.JPanel();
+        lblName1 = new javax.swing.JLabel();
+        lblPoints1 = new javax.swing.JLabel();
+        btnPlayer1_1 = new javax.swing.JButton();
+        btnPlayer1_2 = new javax.swing.JButton();
+        btnPlayer1_3 = new javax.swing.JButton();
+        btnPlayer1_4 = new javax.swing.JButton();
+        btnPlayer1_5 = new javax.swing.JButton();
+        btnPlayer1_6 = new javax.swing.JButton();
+        btnPlayer1_7 = new javax.swing.JButton();
+        btnReady1 = new javax.swing.JButton();
+        btnBack1 = new javax.swing.JButton();
+        btnNewLetters1 = new javax.swing.JButton();
+        pnlPlayer2 = new javax.swing.JPanel();
+        lblName2 = new javax.swing.JLabel();
+        lblPoints2 = new javax.swing.JLabel();
+        btnPlayer2_1 = new javax.swing.JButton();
+        btnPlayer2_2 = new javax.swing.JButton();
+        btnPlayer2_3 = new javax.swing.JButton();
+        btnPlayer2_4 = new javax.swing.JButton();
+        btnPlayer2_5 = new javax.swing.JButton();
+        btnPlayer2_6 = new javax.swing.JButton();
+        btnPlayer2_7 = new javax.swing.JButton();
+        btnReady2 = new javax.swing.JButton();
+        btnBack2 = new javax.swing.JButton();
+        btnNewLetters2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(24, 77, 31));
@@ -100,33 +126,263 @@ public class Screen3 extends javax.swing.JFrame {
             }
         });
 
+        pnlPlayer1.setBackground(new java.awt.Color(27, 77, 31));
+        pnlPlayer1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+
+        lblName1.setFont(new java.awt.Font("Times New Roman", 2, 24)); // NOI18N
+        lblName1.setForeground(new java.awt.Color(204, 204, 204));
+        lblName1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblName1.setText("Играч 1");
+
+        lblPoints1.setFont(new java.awt.Font("Times New Roman", 2, 24)); // NOI18N
+        lblPoints1.setForeground(new java.awt.Color(204, 204, 204));
+        lblPoints1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblPoints1.setText("0");
+
+        btnPlayer1_1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        btnPlayer1_1.setText("А");
+        btnPlayer1_1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPlayer1_1ActionPerformed(evt);
+            }
+        });
+
+        btnPlayer1_2.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        btnPlayer1_2.setText("Б");
+
+        btnPlayer1_3.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        btnPlayer1_3.setText("В");
+
+        btnPlayer1_4.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        btnPlayer1_4.setText("Г");
+
+        btnPlayer1_5.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        btnPlayer1_5.setText("Д");
+
+        btnPlayer1_6.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        btnPlayer1_6.setText("Е");
+
+        btnPlayer1_7.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        btnPlayer1_7.setText("Ж");
+
+        btnReady1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        btnReady1.setText("Готов");
+
+        btnBack1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        btnBack1.setText("Назад");
+
+        btnNewLetters1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        btnNewLetters1.setText("Нови Букви");
+        btnNewLetters1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNewLetters1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnlPlayer1Layout = new javax.swing.GroupLayout(pnlPlayer1);
+        pnlPlayer1.setLayout(pnlPlayer1Layout);
+        pnlPlayer1Layout.setHorizontalGroup(
+            pnlPlayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlPlayer1Layout.createSequentialGroup()
+                .addComponent(lblName1, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblPoints1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(pnlPlayer1Layout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(btnPlayer1_1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnPlayer1_2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnPlayer1_3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnPlayer1_4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnPlayer1_5, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnPlayer1_6, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnPlayer1_7, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlPlayer1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnNewLetters1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnBack1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnReady1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12))
+        );
+        pnlPlayer1Layout.setVerticalGroup(
+            pnlPlayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlPlayer1Layout.createSequentialGroup()
+                .addGroup(pnlPlayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(lblPoints1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblName1, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE))
+                .addGap(36, 36, 36)
+                .addGroup(pnlPlayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnPlayer1_1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPlayer1_2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPlayer1_3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPlayer1_4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPlayer1_5, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPlayer1_6, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPlayer1_7, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addGroup(pnlPlayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE, false)
+                    .addComponent(btnBack1, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                    .addComponent(btnReady1, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                    .addComponent(btnNewLetters1, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
+        btnPlayer1_4.getAccessibleContext().setAccessibleName("btnPlayer1_4");
+
+        pnlPlayer2.setBackground(new java.awt.Color(27, 77, 31));
+        pnlPlayer2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+
+        lblName2.setFont(new java.awt.Font("Times New Roman", 2, 24)); // NOI18N
+        lblName2.setForeground(new java.awt.Color(204, 204, 204));
+        lblName2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblName2.setText("Играч 2");
+
+        lblPoints2.setFont(new java.awt.Font("Times New Roman", 2, 24)); // NOI18N
+        lblPoints2.setForeground(new java.awt.Color(204, 204, 204));
+        lblPoints2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblPoints2.setText("0");
+
+        btnPlayer2_1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        btnPlayer2_1.setText("А");
+        btnPlayer2_1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPlayer2_1ActionPerformed(evt);
+            }
+        });
+
+        btnPlayer2_2.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        btnPlayer2_2.setText("Б");
+
+        btnPlayer2_3.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        btnPlayer2_3.setText("В");
+
+        btnPlayer2_4.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        btnPlayer2_4.setText("Г");
+
+        btnPlayer2_5.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        btnPlayer2_5.setText("Д");
+
+        btnPlayer2_6.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        btnPlayer2_6.setText("Е");
+
+        btnPlayer2_7.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        btnPlayer2_7.setText("Ж");
+
+        btnReady2.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        btnReady2.setText("Готов");
+
+        btnBack2.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        btnBack2.setText("Назад");
+
+        btnNewLetters2.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        btnNewLetters2.setText("Нови Букви");
+        btnNewLetters2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNewLetters2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnlPlayer2Layout = new javax.swing.GroupLayout(pnlPlayer2);
+        pnlPlayer2.setLayout(pnlPlayer2Layout);
+        pnlPlayer2Layout.setHorizontalGroup(
+            pnlPlayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlPlayer2Layout.createSequentialGroup()
+                .addComponent(lblName2, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblPoints2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(pnlPlayer2Layout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(btnPlayer2_1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnPlayer2_2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnPlayer2_3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnPlayer2_4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnPlayer2_5, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnPlayer2_6, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnPlayer2_7, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlPlayer2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnNewLetters2, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnBack2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnReady2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12))
+        );
+        pnlPlayer2Layout.setVerticalGroup(
+            pnlPlayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlPlayer2Layout.createSequentialGroup()
+                .addGroup(pnlPlayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(lblPoints2, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
+                    .addComponent(lblName2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(36, 36, 36)
+                .addGroup(pnlPlayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnPlayer2_1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPlayer2_2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPlayer2_3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPlayer2_4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPlayer2_5, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPlayer2_6, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPlayer2_7, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addGroup(pnlPlayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE, false)
+                    .addComponent(btnBack2, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                    .addComponent(btnReady2, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                    .addComponent(btnNewLetters2, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout pnlFullLayout = new javax.swing.GroupLayout(pnlFull);
         pnlFull.setLayout(pnlFullLayout);
         pnlFullLayout.setHorizontalGroup(
             pnlFullLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlFullLayout.createSequentialGroup()
-                .addGap(0, 899, Short.MAX_VALUE)
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(pnlFullLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnStart, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnLegend, javax.swing.GroupLayout.Alignment.TRAILING)))
+                    .addComponent(btnLegend, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnStart, javax.swing.GroupLayout.Alignment.TRAILING)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFullLayout.createSequentialGroup()
+                .addContainerGap(570, Short.MAX_VALUE)
+                .addGroup(pnlFullLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(pnlPlayer2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnlPlayer1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(58, 58, 58))
         );
         pnlFullLayout.setVerticalGroup(
             pnlFullLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFullLayout.createSequentialGroup()
                 .addComponent(btnLegend)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 501, Short.MAX_VALUE)
-                .addComponent(btnStart, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(43, 43, 43)
+                .addComponent(pnlPlayer1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(61, 61, 61)
+                .addComponent(pnlPlayer2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+                .addComponent(btnStart))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlFull, javax.swing.GroupLayout.DEFAULT_SIZE, 1160, Short.MAX_VALUE)
+            .addComponent(pnlFull, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlFull, javax.swing.GroupLayout.DEFAULT_SIZE, 678, Short.MAX_VALUE)
+            .addComponent(pnlFull, javax.swing.GroupLayout.DEFAULT_SIZE, 737, Short.MAX_VALUE)
         );
 
         pack();
@@ -148,6 +404,22 @@ public class Screen3 extends javax.swing.JFrame {
     private void btnLegendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLegendActionPerformed
         new ScreenLegend().setVisible(true);
     }//GEN-LAST:event_btnLegendActionPerformed
+
+    private void btnPlayer1_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer1_1ActionPerformed
+
+    }//GEN-LAST:event_btnPlayer1_1ActionPerformed
+
+    private void btnNewLetters1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewLetters1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnNewLetters1ActionPerformed
+
+    private void btnPlayer2_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer2_1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnPlayer2_1ActionPerformed
+
+    private void btnNewLetters2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewLetters2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnNewLetters2ActionPerformed
 
     
     public static void Run() {
@@ -183,8 +455,34 @@ public class Screen3 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBack1;
+    private javax.swing.JButton btnBack2;
     private javax.swing.JButton btnLegend;
+    private javax.swing.JButton btnNewLetters1;
+    private javax.swing.JButton btnNewLetters2;
+    private javax.swing.JButton btnPlayer1_1;
+    private javax.swing.JButton btnPlayer1_2;
+    private javax.swing.JButton btnPlayer1_3;
+    private javax.swing.JButton btnPlayer1_4;
+    private javax.swing.JButton btnPlayer1_5;
+    private javax.swing.JButton btnPlayer1_6;
+    private javax.swing.JButton btnPlayer1_7;
+    private javax.swing.JButton btnPlayer2_1;
+    private javax.swing.JButton btnPlayer2_2;
+    private javax.swing.JButton btnPlayer2_3;
+    private javax.swing.JButton btnPlayer2_4;
+    private javax.swing.JButton btnPlayer2_5;
+    private javax.swing.JButton btnPlayer2_6;
+    private javax.swing.JButton btnPlayer2_7;
+    private javax.swing.JButton btnReady1;
+    private javax.swing.JButton btnReady2;
     private javax.swing.JButton btnStart;
+    private javax.swing.JLabel lblName1;
+    private javax.swing.JLabel lblName2;
+    private javax.swing.JLabel lblPoints1;
+    private javax.swing.JLabel lblPoints2;
     private javax.swing.JPanel pnlFull;
+    private javax.swing.JPanel pnlPlayer1;
+    private javax.swing.JPanel pnlPlayer2;
     // End of variables declaration//GEN-END:variables
 }

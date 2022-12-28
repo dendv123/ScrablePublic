@@ -49,6 +49,11 @@ public class Screen2_2 extends javax.swing.JFrame {
         lblPlayer1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         txtPlayer1Name.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        txtPlayer1Name.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPlayer1NameActionPerformed(evt);
+            }
+        });
 
         btnOk1.setBackground(new java.awt.Color(137, 102, 163));
         btnOk1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
@@ -235,7 +240,7 @@ public class Screen2_2 extends javax.swing.JFrame {
     private void btnOk2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOk2ActionPerformed
         if (!Screen2.setUsername(txtPlayer2Name.getText()))
         {
-            lblWarning1.setVisible(true);
+            lblWarning2.setVisible(true);
         }
         else
         {
@@ -251,6 +256,10 @@ public class Screen2_2 extends javax.swing.JFrame {
             OBJ.importUsername(txtPlayer1Name.getText() + "\n" + txtPlayer2Name.getText() + "\n");
        new Screen3().setVisible(true);
     }//GEN-LAST:event_btnContinueActionPerformed
+
+    private void txtPlayer1NameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPlayer1NameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPlayer1NameActionPerformed
 
     /**
      * @param args the command line arguments
