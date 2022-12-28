@@ -130,10 +130,8 @@ public class Screen_1 extends javax.swing.JFrame {
         new Screen2_2().setVisible(true);
     }//GEN-LAST:event_btn2PlayersActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
+    
+    public static void Run() {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.

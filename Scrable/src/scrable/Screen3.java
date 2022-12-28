@@ -1,21 +1,57 @@
 
 package scrable;
+import java.awt.Color;
 import javax.swing.*;
 
 public class Screen3 extends javax.swing.JFrame {
-    
-    public void arr(){
+    private JPanel [][]pnlArr = new JPanel[15][15];
         
-    
-        JPanel [][]pnlArr = new JPanel[15][15];
+    public void arr(){
         for(int i=0; i<15; i++){
             for(int j=0; j<15; j++){
                 pnlArr[i][j] = new JPanel();
+                add(pnlArr[i][j]);
+                pnlArr[i][j].setBounds(10 + j * (getHeight() / 15 - 3 + 3),
+                        10 + i * (getHeight() / 15 - 3 + 3),
+                        getHeight() / 15 - 3, 
+                        getHeight() / 15 - 3);
+                if (((i == 0 || i == 7 || i == 14)
+                        && (j == 0 || j == 7 || j == 14))){
+                    pnlArr[i][j].setBackground(new Color(184, 15, 10)); // crimson red 
+                }
+                else if ((i>=1 && i<=4 || i==7 || i>=10 && i<=13) 
+                        && (i==j || (i + j) == 14)){
+                    pnlArr[i][j].setBackground(Color.pink);
+                }
+                else if (((i == 1 || i == 5 || i == 9 || i == 13) 
+                        && (j == 1 || j == 5 || j == 9 || j == 13)))
+                {
+                    pnlArr[i][j].setBackground(Color.blue);
+                }
+                else if ((i == 2 || i == 6 || i == 8 || i == 12) && 
+                        (j == 2 || j == 6 || j == 8 || j == 12)){
+                    pnlArr[i][j].setBackground(new Color(173, 216, 230)); // sky blue
+                }
+                else if ((i == 3 || i == 11) && (j == 0 || j == 7 || j == 14))
+                {
+                    pnlArr[i][j].setBackground(new Color(173, 216, 230)); // sky blue
+                }
+                else if ((i == 0 || i == 7 || i == 14) && (j == 3 || j == 11))
+                {
+                    pnlArr[i][j].setBackground(new Color(173, 216, 230)); // sky blue
+                }
+                else
+                {
+                    pnlArr[i][j].setBackground(new Color(8,144,0)); // dark green
+                }
             }
         }
     }
     public Screen3() {
         initComponents();
+        setExtendedState(MAXIMIZED_BOTH);
+        btnLegend.setVisible(false);
+        arr();
     }
 
     /**
@@ -27,27 +63,86 @@ public class Screen3 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        pnlFull = new javax.swing.JPanel();
+        btnStart = new javax.swing.JButton();
+        btnLegend = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(24, 77, 31));
         setPreferredSize(new java.awt.Dimension(1200, 700));
+
+        pnlFull.setBackground(new java.awt.Color(27, 77, 31));
+        pnlFull.setPreferredSize(new java.awt.Dimension(700, 1200));
+
+        btnStart.setBackground(new java.awt.Color(12, 91, 20));
+        btnStart.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
+        btnStart.setText("Начало");
+        btnStart.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnStartActionPerformed(evt);
+            }
+        });
+
+        btnLegend.setBackground(new java.awt.Color(12, 91, 20));
+        btnLegend.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        btnLegend.setText("?");
+        btnLegend.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLegendActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnlFullLayout = new javax.swing.GroupLayout(pnlFull);
+        pnlFull.setLayout(pnlFullLayout);
+        pnlFullLayout.setHorizontalGroup(
+            pnlFullLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlFullLayout.createSequentialGroup()
+                .addGap(0, 899, Short.MAX_VALUE)
+                .addGroup(pnlFullLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnStart, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnLegend, javax.swing.GroupLayout.Alignment.TRAILING)))
+        );
+        pnlFullLayout.setVerticalGroup(
+            pnlFullLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFullLayout.createSequentialGroup()
+                .addComponent(btnLegend)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 501, Short.MAX_VALUE)
+                .addComponent(btnStart, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1000, Short.MAX_VALUE)
+            .addComponent(pnlFull, javax.swing.GroupLayout.DEFAULT_SIZE, 1160, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
+            .addComponent(pnlFull, javax.swing.GroupLayout.DEFAULT_SIZE, 678, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
+    private void btnStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStartActionPerformed
+        
+        for (int i = 0; i < 15; ++i)
+        {
+            for (int j = 0; j < 15; ++j)
+            {
+                pnlArr[i][j].repaint();
+            }
+        }
+        btnStart.setVisible(false);
+        btnLegend.setVisible(true);
+    }//GEN-LAST:event_btnStartActionPerformed
+
+    private void btnLegendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLegendActionPerformed
+        new ScreenLegend().setVisible(true);
+    }//GEN-LAST:event_btnLegendActionPerformed
+
+    
+    public static void Run() {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -80,5 +175,8 @@ public class Screen3 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnLegend;
+    private javax.swing.JButton btnStart;
+    private javax.swing.JPanel pnlFull;
     // End of variables declaration//GEN-END:variables
 }
