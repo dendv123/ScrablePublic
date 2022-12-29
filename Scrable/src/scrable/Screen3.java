@@ -60,6 +60,8 @@ public class Screen3 extends javax.swing.JFrame {
         btnLegend.setVisible(false);
         arr();
         setTitle("Скрабъл");
+        pnlPlayer1.setVisible(false);
+        pnlPlayer2.setVisible(false);
     }
 
     /**
@@ -399,6 +401,193 @@ public class Screen3 extends javax.swing.JFrame {
         }
         btnStart.setVisible(false);
         btnLegend.setVisible(true);
+        pnlPlayer1.setVisible(true);
+        pnlPlayer2.setVisible(true);
+        
+        /// wirting points for letters
+        
+        /// button 1 points label
+        {
+            int x = (int)btnPlayer1_1.getLocation().getX();
+            int y = (int)btnPlayer1_1.getLocation().getY();
+            JLabel letPoints = new JLabel();
+            pnlPlayer1.add(letPoints);
+            letPoints.setBounds(x + 30, y - 60, 100, 100);
+            Font f = new Font("Times New Roman", Font.BOLD, 12);
+            letPoints.setFont(f);
+            letPoints.setForeground(new Color(204, 204, 204));
+            letPoints.setText(getLetterPoints(btnPlayer1_1.getText()));
+            letPoints.setVisible(true);
+        }
+        /// button 2 points label
+        {
+            int x = (int)btnPlayer1_2.getLocation().getX();
+            int y = (int)btnPlayer1_2.getLocation().getY();
+            JLabel letPoints = new JLabel();
+            pnlPlayer1.add(letPoints);
+            letPoints.setBounds(x + 30, y - 60, 100, 100);
+            Font f = new Font("Times New Roman", Font.BOLD, 12);
+            letPoints.setFont(f);
+            letPoints.setForeground(new Color(204, 204, 204));
+            letPoints.setText(getLetterPoints(btnPlayer1_2.getText()));
+            letPoints.setVisible(true);
+        }
+        /// button 3 points label
+        {
+            int x = (int)btnPlayer1_3.getLocation().getX();
+            int y = (int)btnPlayer1_3.getLocation().getY();
+            JLabel letPoints = new JLabel();
+            pnlPlayer1.add(letPoints);
+            letPoints.setBounds(x + 30, y - 60, 100, 100);
+            Font f = new Font("Times New Roman", Font.BOLD, 12);
+            letPoints.setFont(f);
+            letPoints.setForeground(new Color(204, 204, 204));
+            letPoints.setText(getLetterPoints(btnPlayer1_3.getText()));
+            letPoints.setVisible(true);
+        }
+        /// button 4 points label
+        {
+            int x = (int)btnPlayer1_4.getLocation().getX();
+            int y = (int)btnPlayer1_4.getLocation().getY();
+            JLabel letPoints = new JLabel();
+            pnlPlayer1.add(letPoints);
+            letPoints.setBounds(x + 30, y - 60, 100, 100);
+            Font f = new Font("Times New Roman", Font.BOLD, 12);
+            letPoints.setFont(f);
+            letPoints.setForeground(new Color(204, 204, 204));
+            letPoints.setText(getLetterPoints(btnPlayer1_4.getText()));
+            letPoints.setVisible(true);
+        }
+        /// button 5 points label
+        {
+            int x = (int)btnPlayer1_5.getLocation().getX();
+            int y = (int)btnPlayer1_5.getLocation().getY();
+            JLabel letPoints = new JLabel();
+            pnlPlayer1.add(letPoints);
+            letPoints.setBounds(x + 30, y - 60, 100, 100);
+            Font f = new Font("Times New Roman", Font.BOLD, 12);
+            letPoints.setFont(f);
+            letPoints.setForeground(new Color(204, 204, 204));
+            letPoints.setText(getLetterPoints(btnPlayer1_5.getText()));
+            letPoints.setVisible(true);
+        }
+        /// button 6 points label
+        {
+            int x = (int)btnPlayer1_6.getLocation().getX();
+            int y = (int)btnPlayer1_6.getLocation().getY();
+            JLabel letPoints = new JLabel();
+            pnlPlayer1.add(letPoints);
+            letPoints.setBounds(x + 30, y - 60, 100, 100);
+            Font f = new Font("Times New Roman", Font.BOLD, 12);
+            letPoints.setFont(f);
+            letPoints.setForeground(new Color(204, 204, 204));
+            letPoints.setText(getLetterPoints(btnPlayer1_6.getText()));
+            letPoints.setVisible(true);
+        }
+        /// button 7 points label
+        {
+            int x = (int)btnPlayer1_7.getLocation().getX();
+            int y = (int)btnPlayer1_7.getLocation().getY();
+            JLabel letPoints = new JLabel();
+            pnlPlayer1.add(letPoints);
+            letPoints.setBounds(x + 30, y - 60, 100, 100);
+            Font f = new Font("Times New Roman", Font.BOLD, 12);
+            letPoints.setFont(f);
+            letPoints.setForeground(new Color(204, 204, 204));
+            letPoints.setText(getLetterPoints(btnPlayer1_7.getText()));
+            letPoints.setVisible(true);
+        }
+        /// button 2.1 points label
+        {
+            int x = (int)btnPlayer2_1.getLocation().getX();
+            int y = (int)btnPlayer2_1.getLocation().getY();
+            JLabel letPoints = new JLabel();
+            pnlPlayer2.add(letPoints);
+            letPoints.setBounds(x + 30, y - 60, 100, 100);
+            Font f = new Font("Times New Roman", Font.BOLD, 12);
+            letPoints.setFont(f);
+            letPoints.setForeground(new Color(204, 204, 204));
+            letPoints.setText(getLetterPoints(btnPlayer2_1.getText()));
+            letPoints.setVisible(true);
+        }
+        /// button 2.2 points label
+        {
+            int x = (int)btnPlayer2_2.getLocation().getX();
+            int y = (int)btnPlayer2_2.getLocation().getY();
+            JLabel letPoints = new JLabel();
+            pnlPlayer2.add(letPoints);
+            letPoints.setBounds(x + 30, y - 60, 100, 100);
+            Font f = new Font("Times New Roman", Font.BOLD, 12);
+            letPoints.setFont(f);
+            letPoints.setForeground(new Color(204, 204, 204));
+            letPoints.setText(getLetterPoints(btnPlayer2_2.getText()));
+            letPoints.setVisible(true);
+        }
+        /// button 2.3 points label
+        {
+            int x = (int)btnPlayer2_3.getLocation().getX();
+            int y = (int)btnPlayer2_3.getLocation().getY();
+            JLabel letPoints = new JLabel();
+            pnlPlayer2.add(letPoints);
+            letPoints.setBounds(x + 30, y - 60, 100, 100);
+            Font f = new Font("Times New Roman", Font.BOLD, 12);
+            letPoints.setFont(f);
+            letPoints.setForeground(new Color(204, 204, 204));
+            letPoints.setText(getLetterPoints(btnPlayer2_3.getText()));
+            letPoints.setVisible(true);
+        }
+        /// button 2.4 points label
+        {
+            int x = (int)btnPlayer2_4.getLocation().getX();
+            int y = (int)btnPlayer2_4.getLocation().getY();
+            JLabel letPoints = new JLabel();
+            pnlPlayer2.add(letPoints);
+            letPoints.setBounds(x + 30, y - 60, 100, 100);
+            Font f = new Font("Times New Roman", Font.BOLD, 12);
+            letPoints.setFont(f);
+            letPoints.setForeground(new Color(204, 204, 204));
+            letPoints.setText(getLetterPoints(btnPlayer2_4.getText()));
+            letPoints.setVisible(true);
+        }
+        /// button 2.5 points label
+        {
+            int x = (int)btnPlayer2_5.getLocation().getX();
+            int y = (int)btnPlayer2_5.getLocation().getY();
+            JLabel letPoints = new JLabel();
+            pnlPlayer2.add(letPoints);
+            letPoints.setBounds(x + 30, y - 60, 100, 100);
+            Font f = new Font("Times New Roman", Font.BOLD, 12);
+            letPoints.setFont(f);
+            letPoints.setForeground(new Color(204, 204, 204));
+            letPoints.setText(getLetterPoints(btnPlayer2_5.getText()));
+            letPoints.setVisible(true);
+        }
+        /// button 2.6 points label
+        {
+            int x = (int)btnPlayer2_6.getLocation().getX();
+            int y = (int)btnPlayer2_6.getLocation().getY();
+            JLabel letPoints = new JLabel();
+            pnlPlayer2.add(letPoints);
+            letPoints.setBounds(x + 30, y - 60, 100, 100);
+            Font f = new Font("Times New Roman", Font.BOLD, 12);
+            letPoints.setFont(f);
+            letPoints.setForeground(new Color(204, 204, 204));
+            letPoints.setText(getLetterPoints(btnPlayer2_6.getText()));
+            letPoints.setVisible(true);
+        }
+        /// button 2.7 points label
+        {
+            int x = (int)btnPlayer2_7.getLocation().getX();
+            int y = (int)btnPlayer2_7.getLocation().getY();
+            JLabel letPoints = new JLabel();
+            pnlPlayer2.add(letPoints);
+            letPoints.setBounds(x + 30, y - 60, 100, 100);
+            Font f = new Font("Times New Roman", Font.BOLD, 12);
+            letPoints.setFont(f);
+            letPoints.setForeground(new Color(204, 204, 204));
+            letPoints.setText(getLetterPoints(btnPlayer2_7.getText()));
+            letPoints.setVisible(true);
+        }
     }//GEN-LAST:event_btnStartActionPerformed
 
     private void btnLegendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLegendActionPerformed
@@ -421,6 +610,104 @@ public class Screen3 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnNewLetters2ActionPerformed
 
+    private String getLetterPoints(String letter)
+    {
+        String ans = "";
+        switch (letter)
+        {
+            case "А":
+                ans += 1;
+                break;
+            case "Б":
+                ans += 2;
+                break;
+            case "В":
+                ans += 2;
+                break;
+            case "Г":
+                ans += 3;
+                break;
+            case "Д":
+                ans += 2;
+                break;
+            case "Е":
+                ans += 1;
+                break;
+            case "Ж":
+                ans += 4;
+                break;
+            case "З":
+                ans += 4;
+                break;
+            case "И":
+                ans += 1;
+                break;
+            case "Й":
+                ans += 5;
+                break;
+            case "К":
+                ans += 2;
+                break;
+            case "Л":
+                ans += 2;
+                break;
+            case "М":
+                ans += 2;
+                break;
+            case "Н":
+                ans += 1;
+                break;
+            case "О":
+                ans += 1;
+                break;
+            case "П":
+                ans += 1;
+                break;
+            case "Р":
+                ans += 1;
+                break;
+            case "С":
+                ans += 1;
+                break;
+            case "Т":
+                ans += 1;
+                break;
+            case "У":
+                ans += 5;
+                break;
+            case "Ф":
+                ans += 10;
+                break;
+            case "Х":
+                ans += 5;
+                break;
+            case "Ц":
+                ans += 8;
+                break;
+            case "Ч":
+                ans += 5;
+                break;
+            case "Ш":
+                ans += 8;
+                break;
+            case "Щ":
+                ans += 10;
+                break;
+            case "Ъ":
+                ans += 3;
+                break;
+            case "ь":
+                ans += 10;
+                break;
+            case "Ю":
+                ans += 8;
+                break;
+            case "Я":
+                ans += 5;
+                break;         
+        }
+        return ans;
+    }
     
     public static void Run() {
         /* Set the Nimbus look and feel */
