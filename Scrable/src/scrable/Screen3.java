@@ -468,7 +468,6 @@ public class Screen3 extends javax.swing.JFrame {
                         setCurrJ(kpj);
                         pnlArr[kpi][kpj].setBorder(BorderFactory.createLineBorder(Color.yellow));
                         setIsPanelSelected(true);
-                        System.out.println("Here");
                     }
                 });
                 if (i == 7 && j == 7)
@@ -938,6 +937,8 @@ public class Screen3 extends javax.swing.JFrame {
         setIsPanelSelected(false);
         if (pnlArr[i][j].getComponentCount() == 0) return;
         Component c = pnlArr[i][j].getComponent(0);
+        String letter = ((JLabel)c).getText();
+        enablePlayer1Button(letter);
         pnlArr[i][j].remove(c);
         pnlArr[i][j].repaint();
     }//GEN-LAST:event_btnBack1ActionPerformed
@@ -950,6 +951,8 @@ public class Screen3 extends javax.swing.JFrame {
         setIsPanelSelected(false);
         if (pnlArr[i][j].getComponentCount() == 0) return;
         Component c = pnlArr[i][j].getComponent(0);
+        String letter = ((JLabel)c).getText();
+        enablePlayer2Button(letter);
         pnlArr[i][j].remove(c);
         pnlArr[i][j].repaint();
     }//GEN-LAST:event_btnBack2ActionPerformed
@@ -1051,6 +1054,70 @@ public class Screen3 extends javax.swing.JFrame {
                 break;         
         }
         return ans;
+    }
+    
+    private void enablePlayer1Button(String letter)
+    {
+        if (btnPlayer1_1.getText().equals(letter) && !btnPlayer1_1.isEnabled())
+        {
+            btnPlayer1_1.setEnabled(true);
+        }
+        else if (btnPlayer1_2.getText().equals(letter) && !btnPlayer1_2.isEnabled())
+        {
+            btnPlayer1_2.setEnabled(true);
+        }
+        else if (btnPlayer1_3.getText().equals(letter) && !btnPlayer1_3.isEnabled())
+        {
+            btnPlayer1_3.setEnabled(true);
+        }
+        else if (btnPlayer1_4.getText().equals(letter) && !btnPlayer1_4.isEnabled())
+        {
+            btnPlayer1_4.setEnabled(true);
+        }
+        else if (btnPlayer1_5.getText().equals(letter) && !btnPlayer1_5.isEnabled())
+        {
+            btnPlayer1_5.setEnabled(true);
+        }
+        else if (btnPlayer1_6.getText().equals(letter) && !btnPlayer1_6.isEnabled())
+        {
+            btnPlayer1_6.setEnabled(true);
+        }
+        else
+        {
+            btnPlayer1_7.setEnabled(true);
+        }
+    }
+    
+    private void enablePlayer2Button(String letter)
+    {
+        if (btnPlayer2_1.getText().equals(letter) && !btnPlayer2_1.isEnabled())
+        {
+            btnPlayer2_1.setEnabled(true);
+        }
+        else if (btnPlayer2_2.getText().equals(letter) && !btnPlayer2_2.isEnabled())
+        {
+            btnPlayer2_2.setEnabled(true);
+        }
+        else if (btnPlayer2_3.getText().equals(letter) && !btnPlayer2_3.isEnabled())
+        {
+            btnPlayer2_3.setEnabled(true);
+        }
+        else if (btnPlayer2_4.getText().equals(letter) && !btnPlayer2_4.isEnabled())
+        {
+            btnPlayer2_4.setEnabled(true);
+        }
+        else if (btnPlayer2_5.getText().equals(letter) && !btnPlayer2_5.isEnabled())
+        {
+            btnPlayer2_5.setEnabled(true);
+        }
+        else if (btnPlayer2_6.getText().equals(letter) && !btnPlayer2_6.isEnabled())
+        {
+            btnPlayer2_6.setEnabled(true);
+        }
+        else
+        {
+            btnPlayer2_7.setEnabled(true);
+        }
     }
     
     public static void Run() {
