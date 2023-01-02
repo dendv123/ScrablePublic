@@ -57,8 +57,8 @@ public class Screen3 extends javax.swing.JFrame {
         setCurrI(7);
         setCurrJ(7);
         setIsPanelSelected(true);
-        lblName1.setText(Screen2_2.getTxtPlayer1Name().getText());
-        lblName2.setText(Screen2_2.getTxtPlayer2Name().getText());
+        //lblName1.setText(Screen2_2.getTxtPlayer1Name().getText());
+        //lblName2.setText(Screen2_2.getTxtPlayer2Name().getText());
     }
 
     /**
@@ -779,7 +779,7 @@ public class Screen3 extends javax.swing.JFrame {
     }//GEN-LAST:event_btnPlayer1_1ActionPerformed
 
     private void btnNewLetters1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewLetters1ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_btnNewLetters1ActionPerformed
 
     private void btnPlayer2_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer2_1ActionPerformed
