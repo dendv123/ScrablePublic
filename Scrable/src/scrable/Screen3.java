@@ -793,6 +793,12 @@ public class Screen3 extends javax.swing.JFrame {
         for (int i = 2; i < 9; ++i)
         {
             Component btn = pnlPlayer1.getComponent(i);
+            for (int j = 0; j < 100; j++) {
+               if(letters[j].equals(""))
+               {
+                   letters[j]=((JButton)btn).getText();
+               }
+            }
             ((JButton)btn).setText(randomLetter());
             removeLetter(((JButton)btn).getText());
         }
@@ -826,6 +832,12 @@ public class Screen3 extends javax.swing.JFrame {
         for (int i = 2; i < 9; ++i)
         {
             Component btn = pnlPlayer2.getComponent(i);
+            for (int j = 0; j < 100; j++) {
+               if(letters[j].equals(""))
+               {
+                   letters[j]=((JButton)btn).getText();
+               }
+            }
             ((JButton)btn).setText(randomLetter());
             removeLetter(((JButton)btn).getText());
         }
