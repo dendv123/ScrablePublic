@@ -16,6 +16,7 @@ public class Screen_1 extends javax.swing.JFrame {
     public Screen_1() {
         initComponents();
         setTitle("Добре Дошли");
+        setLocationRelativeTo(null);
     }
 
     /**
