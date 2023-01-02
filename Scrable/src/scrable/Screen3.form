@@ -150,7 +150,9 @@
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                      <Component id="btnPlayer1_agree" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="btnNewLetters1" min="-2" pref="170" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="btnBack1" min="-2" max="-2" attributes="0"/>
@@ -182,8 +184,9 @@
                           <Component id="btnBack1" alignment="3" pref="50" max="32767" attributes="0"/>
                           <Component id="btnReady1" alignment="3" pref="50" max="32767" attributes="0"/>
                           <Component id="btnNewLetters1" alignment="3" pref="50" max="32767" attributes="0"/>
+                          <Component id="btnPlayer1_agree" pref="50" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -326,6 +329,23 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNewLetters1ActionPerformed"/>
               </Events>
             </Component>
+            <Component class="javax.swing.JButton" name="btnPlayer1_agree">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="cc" green="cc" red="ff" type="rgb"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Times New Roman" size="24" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="&#x421;&#x44a;&#x433;&#x43b;&#x430;&#x441;&#x435;&#x43d;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPlayer1_agreeActionPerformed"/>
+              </Events>
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="pnlPlayer2">
@@ -366,7 +386,9 @@
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                      <Component id="btnPlayer2_agree" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="btnNewLetters2" min="-2" pref="170" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="btnBack2" min="-2" max="-2" attributes="0"/>
@@ -398,6 +420,7 @@
                           <Component id="btnBack2" alignment="3" pref="50" max="32767" attributes="0"/>
                           <Component id="btnReady2" alignment="3" pref="50" max="32767" attributes="0"/>
                           <Component id="btnNewLetters2" alignment="3" pref="50" max="32767" attributes="0"/>
+                          <Component id="btnPlayer2_agree" alignment="3" pref="50" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -537,6 +560,23 @@
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNewLetters2ActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnPlayer2_agree">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="cc" green="cc" red="ff" type="rgb"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Times New Roman" size="24" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="&#x421;&#x44a;&#x433;&#x43b;&#x430;&#x441;&#x435;&#x43d;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPlayer2_agreeActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>

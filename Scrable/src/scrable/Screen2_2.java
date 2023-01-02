@@ -1,7 +1,17 @@
 package scrable;
+
+import javax.swing.JTextField;
+
 public class Screen2_2 extends javax.swing.JFrame {
 
     
+    public static JTextField getTxtPlayer1Name() {
+        return txtPlayer1Name;
+    }
+
+    public static JTextField getTxtPlayer2Name() {
+        return txtPlayer2Name;
+    }
     /**
      * Creates new form Screen_2
      */
@@ -309,7 +319,7 @@ public class Screen2_2 extends javax.swing.JFrame {
     private javax.swing.JPanel pnlPlayer1;
     private javax.swing.JPanel pnlPlayer2;
     private javax.swing.JPanel pnlScreen2_2;
-    private javax.swing.JTextField txtPlayer1Name;
-    private javax.swing.JTextField txtPlayer2Name;
+    private static javax.swing.JTextField txtPlayer1Name;
+    private static javax.swing.JTextField txtPlayer2Name;
     // End of variables declaration//GEN-END:variables
 }

@@ -4,6 +4,8 @@
  */
 package scrable;
 
+import java.awt.Component;
+
 /**
  *
  * @author user
@@ -34,5 +36,18 @@ public class MyJPanel extends javax.swing.JPanel{
         setIs_used(false);
         setSameTurn(false);
     }
+    
+    public MyJPanel(boolean sameTurn, boolean is_used)
+    {
+        super();
+        setSameTurn(sameTurn);
+        setIs_used(is_used);
+    }
+    
+    public MyJPanel(MyJPanel obj)
+    {
+        this(obj.getSameTurn(), obj.getIs_used());
+    }
+
     
 }

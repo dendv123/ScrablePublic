@@ -13,7 +13,7 @@ public class Screen3 extends javax.swing.JFrame {
     private int currI; // index i of where to write
     private int currJ; // index j of where to write
     private boolean isPanelSelected; // indicates if a panel is selected
-    
+
     
     public void setCurrI(int currI){
         if(currI>=0 && currI<15){
@@ -50,6 +50,15 @@ public class Screen3 extends javax.swing.JFrame {
         pnlPlayer1.setVisible(false);
         pnlPlayer2.setVisible(false);
         setIsPanelSelected(false);
+        enablePlayer1();
+        btnPlayer1_agree.setVisible(false);
+        btnPlayer2_agree.setVisible(false);
+        pnlArr[7][7].setBorder(BorderFactory.createLineBorder(Color.yellow));
+        setCurrI(7);
+        setCurrJ(7);
+        setIsPanelSelected(true);
+        //lblName1.setText(Screen2_2.getTxtPlayer1Name().getText());
+        //lblName2.setText(Screen2_2.getTxtPlayer2Name().getText());
     }
 
     /**
@@ -77,6 +86,7 @@ public class Screen3 extends javax.swing.JFrame {
         btnReady1 = new javax.swing.JButton();
         btnBack1 = new javax.swing.JButton();
         btnNewLetters1 = new javax.swing.JButton();
+        btnPlayer1_agree = new javax.swing.JButton();
         pnlPlayer2 = new javax.swing.JPanel();
         lblName2 = new javax.swing.JLabel();
         lblPoints2 = new javax.swing.JLabel();
@@ -90,6 +100,7 @@ public class Screen3 extends javax.swing.JFrame {
         btnReady2 = new javax.swing.JButton();
         btnBack2 = new javax.swing.JButton();
         btnNewLetters2 = new javax.swing.JButton();
+        btnPlayer2_agree = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(24, 77, 31));
@@ -209,6 +220,16 @@ public class Screen3 extends javax.swing.JFrame {
             }
         });
 
+        btnPlayer1_agree.setBackground(new java.awt.Color(255, 204, 204));
+        btnPlayer1_agree.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        btnPlayer1_agree.setForeground(new java.awt.Color(255, 0, 0));
+        btnPlayer1_agree.setText("Съгласен");
+        btnPlayer1_agree.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPlayer1_agreeActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout pnlPlayer1Layout = new javax.swing.GroupLayout(pnlPlayer1);
         pnlPlayer1.setLayout(pnlPlayer1Layout);
         pnlPlayer1Layout.setHorizontalGroup(
@@ -234,7 +255,9 @@ public class Screen3 extends javax.swing.JFrame {
                 .addComponent(btnPlayer1_7, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlPlayer1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(14, 14, 14)
+                .addComponent(btnPlayer1_agree, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnNewLetters1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnBack1)
@@ -261,7 +284,8 @@ public class Screen3 extends javax.swing.JFrame {
                 .addGroup(pnlPlayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE, false)
                     .addComponent(btnBack1, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
                     .addComponent(btnReady1, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                    .addComponent(btnNewLetters1, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE))
+                    .addComponent(btnNewLetters1, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                    .addComponent(btnPlayer1_agree, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -360,6 +384,16 @@ public class Screen3 extends javax.swing.JFrame {
             }
         });
 
+        btnPlayer2_agree.setBackground(new java.awt.Color(255, 204, 204));
+        btnPlayer2_agree.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        btnPlayer2_agree.setForeground(new java.awt.Color(255, 0, 0));
+        btnPlayer2_agree.setText("Съгласен");
+        btnPlayer2_agree.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPlayer2_agreeActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout pnlPlayer2Layout = new javax.swing.GroupLayout(pnlPlayer2);
         pnlPlayer2.setLayout(pnlPlayer2Layout);
         pnlPlayer2Layout.setHorizontalGroup(
@@ -385,7 +419,9 @@ public class Screen3 extends javax.swing.JFrame {
                 .addComponent(btnPlayer2_7, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlPlayer2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(14, 14, 14)
+                .addComponent(btnPlayer2_agree, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnNewLetters2, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnBack2)
@@ -412,7 +448,8 @@ public class Screen3 extends javax.swing.JFrame {
                 .addGroup(pnlPlayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE, false)
                     .addComponent(btnBack2, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
                     .addComponent(btnReady2, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                    .addComponent(btnNewLetters2, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE))
+                    .addComponent(btnNewLetters2, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                    .addComponent(btnPlayer2_agree, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -1000,19 +1037,14 @@ public class Screen3 extends javax.swing.JFrame {
     }//GEN-LAST:event_btnBack2ActionPerformed
 
     private void btnReady1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReady1ActionPerformed
-        for (int i = 0; i < 15; ++i)
-        {
-            for (int j = 0; j < 15; ++j)
-            {
-                if (pnlArr[i][j].getIs_used())
-                {
-                    pnlArr[i][j].setSameTurn(false);
-                }
-            }
-        }
+        btnPlayer2_agree.setVisible(true);
     }//GEN-LAST:event_btnReady1ActionPerformed
 
     private void btnReady2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReady2ActionPerformed
+        btnPlayer1_agree.setVisible(true);
+    }//GEN-LAST:event_btnReady2ActionPerformed
+
+    private void btnPlayer1_agreeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer1_agreeActionPerformed
         for (int i = 0; i < 15; ++i)
         {
             for (int j = 0; j < 15; ++j)
@@ -1023,7 +1055,26 @@ public class Screen3 extends javax.swing.JFrame {
                 }
             }
         }
-    }//GEN-LAST:event_btnReady2ActionPerformed
+        btnPlayer1_agree.setVisible(false);
+        lblPoints2.setText((getPoints() + Integer.parseInt(lblPoints2.getText())) + "");
+        enablePlayer1();
+    }//GEN-LAST:event_btnPlayer1_agreeActionPerformed
+
+    private void btnPlayer2_agreeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer2_agreeActionPerformed
+        for (int i = 0; i < 15; ++i)
+        {
+            for (int j = 0; j < 15; ++j)
+            {
+                if (pnlArr[i][j].getIs_used())
+                {
+                    pnlArr[i][j].setSameTurn(false);
+                }
+            }
+        }
+        btnPlayer2_agree.setVisible(false);
+        lblPoints1.setText((getPoints() + Integer.parseInt(lblPoints1.getText())) + "");
+        enablePlayer2();
+    }//GEN-LAST:event_btnPlayer2_agreeActionPerformed
 
     private String getLetterPoints(String letter)
     {
@@ -1188,6 +1239,229 @@ public class Screen3 extends javax.swing.JFrame {
         }
     }
     
+    private int getPoints()
+    {
+        int ans = 0;
+        
+        // checking if vertically
+        int wordMultiplierVertically = 1;
+        int word1 = 0;
+        
+        for (int i = getCurrI(), j = getCurrJ(); i >= 0 && pnlArr[i][j].getComponentCount() != 0; --i)
+        {
+            Component c = pnlArr[i][j].getComponent(0);
+            int multiplier = 1;
+            if (pnlArr[i][j].getBackground().getRGB() == new Color(173, 216, 230).getRGB()) // check if sky blue
+            {
+                multiplier = 2;
+            }
+            else if (pnlArr[i][j].getBackground().getRGB() == Color.blue.getRGB())
+            {
+                multiplier = 3;
+            }
+            else if (pnlArr[i][j].getBackground().getRGB() == Color.pink.getRGB())
+            {
+                wordMultiplierVertically *= 2;
+            }
+            else if (pnlArr[i][j].getBackground().getRGB() == new Color(184, 15, 10).getRGB()) // check if crimson red
+            {
+                wordMultiplierVertically *= 3;
+            }
+            word1 += multiplier * Integer.parseInt(getLetterPoints(((JLabel)c).getText()));
+        }
+        
+        for (int i = getCurrI(), j = getCurrJ(); i < 15 && pnlArr[i][j].getComponentCount() != 0; ++i)
+        {
+            Component c = pnlArr[i][j].getComponent(0);
+            int multiplier = 1;
+            if (pnlArr[i][j].getBackground().getRGB() == new Color(173, 216, 230).getRGB()) // check if sky blue
+            {
+                multiplier = 2;
+            }
+            else if (pnlArr[i][j].getBackground().getRGB() == Color.blue.getRGB())
+            {
+                multiplier = 3;
+            }
+            else if (pnlArr[i][j].getBackground().getRGB() == Color.pink.getRGB())
+            {
+                wordMultiplierVertically *= 2;
+            }
+            else if (pnlArr[i][j].getBackground().getRGB() == new Color(184, 15, 10).getRGB()) // check if crimson red
+            {
+                wordMultiplierVertically *= 3;
+            }
+            word1 += multiplier * Integer.parseInt(getLetterPoints(((JLabel)c).getText()));
+        }
+        
+        
+        {
+            Component c = pnlArr[getCurrI()][getCurrJ()].getComponent(0);
+            int multiplier = 1;
+            if (pnlArr[getCurrI()][getCurrJ()].getBackground().getRGB() == new Color(173, 216, 230).getRGB()) // check if sky blue
+            {
+                multiplier = 2;
+            }
+            else if (pnlArr[getCurrI()][getCurrJ()].getBackground().getRGB() == Color.blue.getRGB())
+            {
+                multiplier = 3;
+            }
+            if (getCurrI() + 1 < 15 && getCurrI() - 1 >= 0 &&
+                    pnlArr[getCurrI() + 1][getCurrJ()].getComponentCount() == 0 &&
+                    pnlArr[getCurrI() - 1][getCurrJ()].getComponentCount() == 0)
+                word1 -= 2 * multiplier * Integer.parseInt(getLetterPoints(((JLabel)c).getText()));
+            else if (getCurrI() + 1 == 15 && 
+                    pnlArr[getCurrI() - 1][getCurrJ()].getComponentCount() == 0)
+                word1 -= 2 * multiplier * Integer.parseInt(getLetterPoints(((JLabel)c).getText()));
+            else if (getCurrI() - 1 < 0 && 
+                    pnlArr[getCurrI() + 1][getCurrJ()].getComponentCount() == 0)
+                word1 -= 2 * multiplier * Integer.parseInt(getLetterPoints(((JLabel)c).getText()));
+            else
+                word1 -= multiplier * Integer.parseInt(getLetterPoints(((JLabel)c).getText()));
+            if (pnlArr[getCurrI()][getCurrJ()].getBackground().getRGB() == Color.pink.getRGB())
+                wordMultiplierVertically /= 2;
+            else if (pnlArr[getCurrI()][getCurrJ()].getBackground().getRGB() == new Color(184, 15, 10).getRGB()) // check if crimson red
+                wordMultiplierVertically /= 3;
+            System.out.println(word1);
+            word1 *= wordMultiplierVertically;
+        }
+        
+        
+        /// checking horizontally
+        int wordMultiplierHorizontally = 1;
+        int word2 = 0;
+        
+        for (int i = getCurrI(), j = getCurrJ(); j >= 0 && pnlArr[i][j].getComponentCount() != 0; --j)
+        {
+            Component c = pnlArr[i][j].getComponent(0);
+            int multiplier = 1;
+            if (pnlArr[i][j].getBackground().getRGB() == new Color(173, 216, 230).getRGB()) // check if sky blue
+            {
+                multiplier = 2;
+            }
+            else if (pnlArr[i][j].getBackground().getRGB() == Color.blue.getRGB())
+            {
+                multiplier = 3;
+            }
+            else if (pnlArr[i][j].getBackground().getRGB() == Color.pink.getRGB())
+            {
+                wordMultiplierHorizontally *= 2;
+            }
+            else if (pnlArr[i][j].getBackground().getRGB() == new Color(184, 15, 10).getRGB()) // check if crimson red
+            {
+                wordMultiplierHorizontally *= 3;
+            }
+            word2 += multiplier * Integer.parseInt(getLetterPoints(((JLabel)c).getText()));
+        }
+        
+        for (int i = getCurrI(), j = getCurrJ(); j < 15 && pnlArr[i][j].getComponentCount() != 0; ++j)
+        {
+            Component c = pnlArr[i][j].getComponent(0);
+            int multiplier = 1;
+            if (pnlArr[i][j].getBackground().getRGB() == new Color(173, 216, 230).getRGB()) // check if sky blue
+            {
+                multiplier = 2;
+            }
+            else if (pnlArr[i][j].getBackground().getRGB() == Color.blue.getRGB())
+            {
+                multiplier = 3;
+            }
+            else if (pnlArr[i][j].getBackground().getRGB() == Color.pink.getRGB())
+            {
+                wordMultiplierHorizontally *= 2;
+            }
+            else if (pnlArr[i][j].getBackground().getRGB() == new Color(184, 15, 10).getRGB()) // check if crimson red
+            {
+                wordMultiplierHorizontally *= 3;
+            }
+            word2 += multiplier * Integer.parseInt(getLetterPoints(((JLabel)c).getText()));
+        }
+        
+        
+        {
+            Component c = pnlArr[getCurrI()][getCurrJ()].getComponent(0);
+            int multiplier = 1;
+            if (pnlArr[getCurrI()][getCurrJ()].getBackground().getRGB() == new Color(173, 216, 230).getRGB()) // check if sky blue
+            {
+                multiplier = 2;
+            }
+            else if (pnlArr[getCurrI()][getCurrJ()].getBackground().getRGB() == Color.blue.getRGB())
+            {
+                multiplier = 3;
+            }
+            if ((getCurrJ() + 1 < 15 && getCurrJ() - 1 >= 0 &&
+                    pnlArr[getCurrI()][getCurrJ() + 1].getComponentCount() == 0 && 
+                    pnlArr[getCurrI()][getCurrJ() - 1].getComponentCount() == 0))
+                word2 -= 2 * multiplier * Integer.parseInt(getLetterPoints(((JLabel)c).getText()));
+            else if (getCurrJ() + 1 == 15 && 
+                    pnlArr[getCurrI()][getCurrJ() - 1].getComponentCount() == 0)
+                word2 -= 2 * multiplier * Integer.parseInt(getLetterPoints(((JLabel)c).getText()));
+            else if (getCurrJ() - 1 < 0 && 
+                    pnlArr[getCurrI()][getCurrJ() + 1].getComponentCount() == 0)
+                word2 -= 2 * multiplier * Integer.parseInt(getLetterPoints(((JLabel)c).getText()));
+            else
+                word2 -= multiplier * Integer.parseInt(getLetterPoints(((JLabel)c).getText()));
+            if (pnlArr[getCurrI()][getCurrJ()].getBackground().getRGB() == Color.pink.getRGB())
+                wordMultiplierHorizontally /= 2;
+            else if (pnlArr[getCurrI()][getCurrJ()].getBackground().getRGB() == new Color(184, 15, 10).getRGB()) // check if crimson red
+                wordMultiplierHorizontally /= 3;
+            word2 *= wordMultiplierHorizontally;
+        }
+        System.out.println(word1 + " " + word2);
+        ans = word1 + word2;
+
+        return ans;
+    }
+    
+    private void enablePlayer1()
+    {
+        btnPlayer1_1.setEnabled(true);
+        btnPlayer1_2.setEnabled(true);
+        btnPlayer1_3.setEnabled(true);
+        btnPlayer1_4.setEnabled(true);
+        btnPlayer1_5.setEnabled(true);
+        btnPlayer1_6.setEnabled(true);
+        btnPlayer1_7.setEnabled(true);
+        btnBack1.setEnabled(true);
+        btnReady1.setEnabled(true);
+        btnNewLetters1.setEnabled(true);
+        
+        btnPlayer2_1.setEnabled(false);
+        btnPlayer2_2.setEnabled(false);
+        btnPlayer2_3.setEnabled(false);
+        btnPlayer2_4.setEnabled(false);
+        btnPlayer2_5.setEnabled(false);
+        btnPlayer2_6.setEnabled(false);
+        btnPlayer2_7.setEnabled(false);
+        btnBack2.setEnabled(false);
+        btnReady2.setEnabled(false);
+        btnNewLetters2.setEnabled(false);
+    }
+    
+    private void enablePlayer2()
+    {
+        btnPlayer2_1.setEnabled(true);
+        btnPlayer2_2.setEnabled(true);
+        btnPlayer2_3.setEnabled(true);
+        btnPlayer2_4.setEnabled(true);
+        btnPlayer2_5.setEnabled(true);
+        btnPlayer2_6.setEnabled(true);
+        btnPlayer2_7.setEnabled(true);
+        btnBack2.setEnabled(true);
+        btnReady2.setEnabled(true);
+        btnNewLetters2.setEnabled(true);
+        
+        btnPlayer1_1.setEnabled(false);
+        btnPlayer1_2.setEnabled(false);
+        btnPlayer1_3.setEnabled(false);
+        btnPlayer1_4.setEnabled(false);
+        btnPlayer1_5.setEnabled(false);
+        btnPlayer1_6.setEnabled(false);
+        btnPlayer1_7.setEnabled(false);
+        btnBack1.setEnabled(false);
+        btnReady1.setEnabled(false);
+        btnNewLetters1.setEnabled(false);
+    }
+    
     public static void Run() {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -1233,6 +1507,7 @@ public class Screen3 extends javax.swing.JFrame {
     private javax.swing.JButton btnPlayer1_5;
     private javax.swing.JButton btnPlayer1_6;
     private javax.swing.JButton btnPlayer1_7;
+    private javax.swing.JButton btnPlayer1_agree;
     private javax.swing.JButton btnPlayer2_1;
     private javax.swing.JButton btnPlayer2_2;
     private javax.swing.JButton btnPlayer2_3;
@@ -1240,6 +1515,7 @@ public class Screen3 extends javax.swing.JFrame {
     private javax.swing.JButton btnPlayer2_5;
     private javax.swing.JButton btnPlayer2_6;
     private javax.swing.JButton btnPlayer2_7;
+    private javax.swing.JButton btnPlayer2_agree;
     private javax.swing.JButton btnReady1;
     private javax.swing.JButton btnReady2;
     private javax.swing.JButton btnStart;
