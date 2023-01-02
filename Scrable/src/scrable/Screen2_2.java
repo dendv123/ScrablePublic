@@ -21,6 +21,8 @@ public class Screen2_2 extends javax.swing.JFrame {
         lblWarning2.setVisible(false);
         setTitle("Вход");
         setLocationRelativeTo(null);
+        btnContinue.setVisible(false);
+
     }
 
     /**
@@ -245,6 +247,11 @@ public class Screen2_2 extends javax.swing.JFrame {
         {
             txtPlayer1Name.enable(false);
             btnOk1.setVisible(false);
+            btnOk1.setEnabled(false);
+            if(!btnOk2.isEnabled()&&!btnOk1.isEnabled())
+            {
+                btnContinue.setVisible(true);
+            }
         }
     }//GEN-LAST:event_btnOk1ActionPerformed
 
@@ -257,14 +264,19 @@ public class Screen2_2 extends javax.swing.JFrame {
         {
             txtPlayer2Name.enable(false);
             btnOk2.setVisible(false);
+            btnOk2.setEnabled(false);
+            if(!btnOk2.isEnabled()&&!btnOk1.isEnabled())
+            {
+                btnContinue.setVisible(true);
+            }
         }
     }//GEN-LAST:event_btnOk2ActionPerformed
 
     private void btnContinueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContinueActionPerformed
-       dispose();
-       Screen2 OBJ=new Screen2();
-       OBJ.importUsername(txtPlayer1Name.getText() + "\n" + txtPlayer2Name.getText() + "\n");
-       new Screen3().setVisible(true);
+        dispose();
+        Screen2 OBJ=new Screen2();
+        OBJ.importUsername(txtPlayer1Name.getText() + "\n" + txtPlayer2Name.getText() + "\n");
+        new Screen3().setVisible(true);
     }//GEN-LAST:event_btnContinueActionPerformed
 
     private void txtPlayer1NameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPlayer1NameActionPerformed

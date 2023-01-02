@@ -57,8 +57,8 @@ public class Screen3 extends javax.swing.JFrame {
         setCurrI(7);
         setCurrJ(7);
         setIsPanelSelected(true);
-        //lblName1.setText(Screen2_2.getTxtPlayer1Name().getText());
-        //lblName2.setText(Screen2_2.getTxtPlayer2Name().getText());
+        lblName1.setText(Screen2_2.getTxtPlayer1Name().getText());
+        lblName2.setText(Screen2_2.getTxtPlayer2Name().getText());
     }
 
     /**
