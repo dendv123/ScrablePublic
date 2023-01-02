@@ -6,6 +6,7 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.event.*;
 import javax.swing.*;
+import java.util.*;
 import javax.swing.border.Border;
 
 public class Screen3 extends javax.swing.JFrame {
@@ -13,7 +14,8 @@ public class Screen3 extends javax.swing.JFrame {
     private int currI; // index i of where to write
     private int currJ; // index j of where to write
     private boolean isPanelSelected; // indicates if a panel is selected
-
+    private String[] letters = {"А","А", "А", "А", "А", "А", "А", "А", "А", "Б", "Б", "Б", "В", "В", "В", "В", "Г", "Г", "Г", "Д", "Д", "Д", "Д", "Е", "Е", "Е", "Е", "Е", "Е", "Е", "Е", "Ж", "Ж", "З", "З", "И", "И", "И", "И", "И", "И", "И", "И", "Й", "К", "К", "К", "Л", "Л", "Л", "М", "М", "М", "М", "Н", "Н", "Н", "Н", "О", "О", "О", "О", "О", "О", "О", "О", "О", "П", "П", "П", "П", "Р", "Р", "Р", "Р", "С", "С", "С", "С", "Т", "Т", "Т", "Т", "Т", "У", "У", "У", "Ф", "Х", "Ц", "Ч", "Ч", "Ш", "Щ", "Ъ", "Ъ", "ь", "Ю", "Я", "Я"};
+    Random rand = new Random();
     
     public void setCurrI(int currI){
         if(currI>=0 && currI<15){
@@ -57,8 +59,22 @@ public class Screen3 extends javax.swing.JFrame {
         setCurrI(7);
         setCurrJ(7);
         setIsPanelSelected(true);
-        //lblName1.setText(Screen2_2.getTxtPlayer1Name().getText());
-        //lblName2.setText(Screen2_2.getTxtPlayer2Name().getText());
+        lblName1.setText(Screen2_2.getTxtPlayer1Name().getText());
+        lblName2.setText(Screen2_2.getTxtPlayer2Name().getText());
+        btnPlayer1_1.setText(""+letters[rand.nextInt(102)]);
+        btnPlayer1_2.setText(""+letters[rand.nextInt(102)]);
+        btnPlayer1_3.setText(""+letters[rand.nextInt(102)]);
+        btnPlayer1_4.setText(""+letters[rand.nextInt(102)]);
+        btnPlayer1_5.setText(""+letters[rand.nextInt(102)]);
+        btnPlayer1_6.setText(""+letters[rand.nextInt(102)]);
+        btnPlayer1_7.setText(""+letters[rand.nextInt(102)]);
+        btnPlayer2_1.setText(""+letters[rand.nextInt(102)]);
+        btnPlayer2_2.setText(""+letters[rand.nextInt(102)]);
+        btnPlayer2_3.setText(""+letters[rand.nextInt(102)]);
+        btnPlayer2_4.setText(""+letters[rand.nextInt(102)]);
+        btnPlayer2_5.setText(""+letters[rand.nextInt(102)]);
+        btnPlayer2_6.setText(""+letters[rand.nextInt(102)]);
+        btnPlayer2_7.setText(""+letters[rand.nextInt(102)]);
     }
 
     /**
@@ -105,7 +121,6 @@ public class Screen3 extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(24, 77, 31));
         setPreferredSize(new java.awt.Dimension(1200, 700));
-        setResizable(false);
 
         pnlFull.setBackground(new java.awt.Color(27, 77, 31));
         pnlFull.setPreferredSize(new java.awt.Dimension(700, 1200));
@@ -779,7 +794,20 @@ public class Screen3 extends javax.swing.JFrame {
     }//GEN-LAST:event_btnPlayer1_1ActionPerformed
 
     private void btnNewLetters1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewLetters1ActionPerformed
-        
+        btnPlayer1_1.setText(""+letters[rand.nextInt(102)]);
+        btnPlayer1_2.setText(""+letters[rand.nextInt(102)]);
+        btnPlayer1_3.setText(""+letters[rand.nextInt(102)]);
+        btnPlayer1_4.setText(""+letters[rand.nextInt(102)]);
+        btnPlayer1_5.setText(""+letters[rand.nextInt(102)]);
+        btnPlayer1_6.setText(""+letters[rand.nextInt(102)]);
+        btnPlayer1_7.setText(""+letters[rand.nextInt(102)]);
+        enablePlayer2();
+        for (int i = 13; i <= 19; ++i)
+        {
+            Component pts = pnlPlayer1.getComponent(i);
+            Component btn = pnlPlayer1.getComponent(i - 11);
+            ((JLabel)pts).setText(getLetterPoints(((JButton)btn).getText()));
+        }
     }//GEN-LAST:event_btnNewLetters1ActionPerformed
 
     private void btnPlayer2_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer2_1ActionPerformed
@@ -800,7 +828,20 @@ public class Screen3 extends javax.swing.JFrame {
     }//GEN-LAST:event_btnPlayer2_1ActionPerformed
 
     private void btnNewLetters2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewLetters2ActionPerformed
-        // TODO add your handling code here:
+        btnPlayer2_1.setText(""+letters[rand.nextInt(102)]);
+        btnPlayer2_2.setText(""+letters[rand.nextInt(102)]);
+        btnPlayer2_3.setText(""+letters[rand.nextInt(102)]);
+        btnPlayer2_4.setText(""+letters[rand.nextInt(102)]);
+        btnPlayer2_5.setText(""+letters[rand.nextInt(102)]);
+        btnPlayer2_6.setText(""+letters[rand.nextInt(102)]);
+        btnPlayer2_7.setText(""+letters[rand.nextInt(102)]);
+        enablePlayer1();
+        for (int i = 13; i <= 19; ++i)
+        {
+            Component pts = pnlPlayer2.getComponent(i);
+            Component btn = pnlPlayer2.getComponent(i - 11);
+            ((JLabel)pts).setText(getLetterPoints(((JButton)btn).getText()));
+        }
     }//GEN-LAST:event_btnNewLetters2ActionPerformed
 
     private void btnPlayer1_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer1_2ActionPerformed
@@ -1018,8 +1059,6 @@ public class Screen3 extends javax.swing.JFrame {
         Component c = pnlArr[i][j].getComponent(0);
         String letter = ((JLabel)c).getText();
         enablePlayer1Button(letter);
-        pnlArr[i][j].setIs_used(false);
-        pnlArr[i][j].setSameTurn(false);
         pnlArr[i][j].remove(c);
         pnlArr[i][j].repaint();
     }//GEN-LAST:event_btnBack1ActionPerformed
@@ -1035,8 +1074,6 @@ public class Screen3 extends javax.swing.JFrame {
         Component c = pnlArr[i][j].getComponent(0);
         String letter = ((JLabel)c).getText();
         enablePlayer2Button(letter);
-        pnlArr[i][j].setIs_used(false);
-        pnlArr[i][j].setSameTurn(false);
         pnlArr[i][j].remove(c);
         pnlArr[i][j].repaint();
     }//GEN-LAST:event_btnBack2ActionPerformed
@@ -1061,15 +1098,7 @@ public class Screen3 extends javax.swing.JFrame {
             }
         }
         btnPlayer1_agree.setVisible(false);
-        try
-        {
-            lblPoints2.setText((getPoints() + Integer.parseInt(lblPoints2.getText())) + "");
-        }
-        catch (ArrayIndexOutOfBoundsException e)
-        {
-            JOptionPane.showMessageDialog(this, "Can't be an empty space", "Error", JOptionPane.PLAIN_MESSAGE);
-            return;
-        }
+        lblPoints2.setText((getPoints() + Integer.parseInt(lblPoints2.getText())) + "");
         enablePlayer1();
     }//GEN-LAST:event_btnPlayer1_agreeActionPerformed
 
@@ -1085,15 +1114,7 @@ public class Screen3 extends javax.swing.JFrame {
             }
         }
         btnPlayer2_agree.setVisible(false);
-        try
-        {
-            lblPoints1.setText((getPoints() + Integer.parseInt(lblPoints1.getText())) + "");
-        }
-        catch (ArrayIndexOutOfBoundsException e)
-        {
-            JOptionPane.showMessageDialog(this, "Can't be an empty space", "Error", JOptionPane.PLAIN_MESSAGE);
-            return;
-        }
+        lblPoints1.setText((getPoints() + Integer.parseInt(lblPoints1.getText())) + "");
         enablePlayer2();
     }//GEN-LAST:event_btnPlayer2_agreeActionPerformed
 
@@ -1435,7 +1456,6 @@ public class Screen3 extends javax.swing.JFrame {
     
     private void enablePlayer1()
     {
-        System.out.println("here");
         btnPlayer1_1.setEnabled(true);
         btnPlayer1_2.setEnabled(true);
         btnPlayer1_3.setEnabled(true);

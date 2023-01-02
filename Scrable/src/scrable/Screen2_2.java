@@ -20,9 +20,8 @@ public class Screen2_2 extends javax.swing.JFrame {
         lblWarning1.setVisible(false);
         lblWarning2.setVisible(false);
         setTitle("Вход");
-        setLocationRelativeTo(null);
         btnContinue.setVisible(false);
-
+        setLocationRelativeTo(null);
     }
 
     /**
