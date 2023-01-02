@@ -59,8 +59,8 @@ public class Screen3 extends javax.swing.JFrame {
         setCurrI(7);
         setCurrJ(7);
         setIsPanelSelected(true);
-        lblName1.setText(Screen2_2.getTxtPlayer1Name().getText());
-        lblName2.setText(Screen2_2.getTxtPlayer2Name().getText());
+        //lblName1.setText(Screen2_2.getTxtPlayer1Name().getText());
+        //lblName2.setText(Screen2_2.getTxtPlayer2Name().getText());
         btnPlayer1_1.setText(""+letters[rand.nextInt(102)]);
         btnPlayer1_2.setText(""+letters[rand.nextInt(102)]);
         btnPlayer1_3.setText(""+letters[rand.nextInt(102)]);
@@ -1099,6 +1099,14 @@ public class Screen3 extends javax.swing.JFrame {
         }
         btnPlayer1_agree.setVisible(false);
         lblPoints2.setText((getPoints() + Integer.parseInt(lblPoints2.getText())) + "");
+        for (int i = 2; i < 9; ++i)
+        {
+            Component btn = pnlPlayer2.getComponent(i);
+            if (!btn.isEnabled())
+            {
+                ((JButton)btn).setText(letters[rand.nextInt(102)]);
+            }
+        }
         enablePlayer1();
     }//GEN-LAST:event_btnPlayer1_agreeActionPerformed
 
@@ -1115,6 +1123,14 @@ public class Screen3 extends javax.swing.JFrame {
         }
         btnPlayer2_agree.setVisible(false);
         lblPoints1.setText((getPoints() + Integer.parseInt(lblPoints1.getText())) + "");
+        for (int i = 2; i < 9; ++i)
+        {
+            Component btn = pnlPlayer2.getComponent(i);
+            if (!btn.isEnabled())
+            {
+                ((JButton)btn).setText(letters[rand.nextInt(102)]);
+            }
+        }
         enablePlayer2();
     }//GEN-LAST:event_btnPlayer2_agreeActionPerformed
 
