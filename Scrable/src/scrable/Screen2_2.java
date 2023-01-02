@@ -20,6 +20,7 @@ public class Screen2_2 extends javax.swing.JFrame {
         lblWarning1.setVisible(false);
         lblWarning2.setVisible(false);
         setTitle("Вход");
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -262,8 +263,7 @@ public class Screen2_2 extends javax.swing.JFrame {
     private void btnContinueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContinueActionPerformed
        dispose();
        Screen2 OBJ=new Screen2();
-               
-            OBJ.importUsername(txtPlayer1Name.getText() + "\n" + txtPlayer2Name.getText() + "\n");
+       OBJ.importUsername(txtPlayer1Name.getText() + "\n" + txtPlayer2Name.getText() + "\n");
        new Screen3().setVisible(true);
     }//GEN-LAST:event_btnContinueActionPerformed
 

@@ -105,6 +105,7 @@ public class Screen3 extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(24, 77, 31));
         setPreferredSize(new java.awt.Dimension(1200, 700));
+        setResizable(false);
 
         pnlFull.setBackground(new java.awt.Color(27, 77, 31));
         pnlFull.setPreferredSize(new java.awt.Dimension(700, 1200));
@@ -1017,6 +1018,8 @@ public class Screen3 extends javax.swing.JFrame {
         Component c = pnlArr[i][j].getComponent(0);
         String letter = ((JLabel)c).getText();
         enablePlayer1Button(letter);
+        pnlArr[i][j].setIs_used(false);
+        pnlArr[i][j].setSameTurn(false);
         pnlArr[i][j].remove(c);
         pnlArr[i][j].repaint();
     }//GEN-LAST:event_btnBack1ActionPerformed
@@ -1032,6 +1035,8 @@ public class Screen3 extends javax.swing.JFrame {
         Component c = pnlArr[i][j].getComponent(0);
         String letter = ((JLabel)c).getText();
         enablePlayer2Button(letter);
+        pnlArr[i][j].setIs_used(false);
+        pnlArr[i][j].setSameTurn(false);
         pnlArr[i][j].remove(c);
         pnlArr[i][j].repaint();
     }//GEN-LAST:event_btnBack2ActionPerformed
@@ -1056,7 +1061,15 @@ public class Screen3 extends javax.swing.JFrame {
             }
         }
         btnPlayer1_agree.setVisible(false);
-        lblPoints2.setText((getPoints() + Integer.parseInt(lblPoints2.getText())) + "");
+        try
+        {
+            lblPoints2.setText((getPoints() + Integer.parseInt(lblPoints2.getText())) + "");
+        }
+        catch (ArrayIndexOutOfBoundsException e)
+        {
+            JOptionPane.showMessageDialog(this, "Can't be an empty space", "Error", JOptionPane.PLAIN_MESSAGE);
+            return;
+        }
         enablePlayer1();
     }//GEN-LAST:event_btnPlayer1_agreeActionPerformed
 
@@ -1072,7 +1085,15 @@ public class Screen3 extends javax.swing.JFrame {
             }
         }
         btnPlayer2_agree.setVisible(false);
-        lblPoints1.setText((getPoints() + Integer.parseInt(lblPoints1.getText())) + "");
+        try
+        {
+            lblPoints1.setText((getPoints() + Integer.parseInt(lblPoints1.getText())) + "");
+        }
+        catch (ArrayIndexOutOfBoundsException e)
+        {
+            JOptionPane.showMessageDialog(this, "Can't be an empty space", "Error", JOptionPane.PLAIN_MESSAGE);
+            return;
+        }
         enablePlayer2();
     }//GEN-LAST:event_btnPlayer2_agreeActionPerformed
 
@@ -1414,6 +1435,7 @@ public class Screen3 extends javax.swing.JFrame {
     
     private void enablePlayer1()
     {
+        System.out.println("here");
         btnPlayer1_1.setEnabled(true);
         btnPlayer1_2.setEnabled(true);
         btnPlayer1_3.setEnabled(true);
