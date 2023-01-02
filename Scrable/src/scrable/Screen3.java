@@ -9,7 +9,7 @@ import javax.swing.*;
 import javax.swing.border.Border;
 
 public class Screen3 extends javax.swing.JFrame {
-    private JPanel [][]pnlArr = new JPanel[15][15];
+    private MyJPanel [][]pnlArr = new MyJPanel[15][15];
     private int currI; // index i of where to write
     private int currJ; // index j of where to write
     private boolean isPanelSelected; // indicates if a panel is selected
@@ -187,6 +187,11 @@ public class Screen3 extends javax.swing.JFrame {
 
         btnReady1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btnReady1.setText("Готов");
+        btnReady1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReady1ActionPerformed(evt);
+            }
+        });
 
         btnBack1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btnBack1.setText("Изтрий");
@@ -333,6 +338,11 @@ public class Screen3 extends javax.swing.JFrame {
 
         btnReady2.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btnReady2.setText("Готов");
+        btnReady2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReady2ActionPerformed(evt);
+            }
+        });
 
         btnBack2.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         btnBack2.setText("Изтрий");
@@ -451,7 +461,7 @@ public class Screen3 extends javax.swing.JFrame {
     public void arr(){
         for(int i=0; i<15; i++){
             for(int j=0; j<15; j++){
-                pnlArr[i][j] = new JPanel();
+                pnlArr[i][j] = new MyJPanel();
                 add(pnlArr[i][j]);
                 pnlArr[i][j].setBounds(10 + j * (getHeight() / 15 - 3 + 3),
                         10 + i * (getHeight() / 15 - 3 + 3),
@@ -462,6 +472,8 @@ public class Screen3 extends javax.swing.JFrame {
                 pnlArr[i][j].addMouseListener(new MouseAdapter() {
                     public void mouseClicked(MouseEvent evt)
                     {
+                        if (pnlArr[kpi][kpj].getIs_used() && !pnlArr[kpi][kpj].getSameTurn())
+                            return;
                         if (getIsPanelSelected())
                             return;
                         setCurrI(kpi);
@@ -722,6 +734,8 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setText(btnPlayer1_1.getText());
         txt.setVisible(true);
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
+        pnlArr[i][j].setIs_used(true);
+        pnlArr[i][j].setSameTurn(true);
         setIsPanelSelected(false);
         btnPlayer1_1.setEnabled(false);
     }//GEN-LAST:event_btnPlayer1_1ActionPerformed
@@ -741,6 +755,8 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setText(btnPlayer2_1.getText());
         txt.setVisible(true);
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
+        pnlArr[i][j].setIs_used(true);
+        pnlArr[i][j].setSameTurn(true);
         setIsPanelSelected(false);
         btnPlayer2_1.setEnabled(false);
     }//GEN-LAST:event_btnPlayer2_1ActionPerformed
@@ -760,6 +776,8 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setText(btnPlayer1_2.getText());
         txt.setVisible(true);
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
+        pnlArr[i][j].setIs_used(true);
+        pnlArr[i][j].setSameTurn(true);
         setIsPanelSelected(false);
         btnPlayer1_2.setEnabled(false);
     }//GEN-LAST:event_btnPlayer1_2ActionPerformed
@@ -775,6 +793,8 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setText(btnPlayer1_3.getText());
         txt.setVisible(true);
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
+        pnlArr[i][j].setIs_used(true);
+        pnlArr[i][j].setSameTurn(true);
         setIsPanelSelected(false);
         btnPlayer1_3.setEnabled(false);
     }//GEN-LAST:event_btnPlayer1_3ActionPerformed
@@ -790,6 +810,8 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setText(btnPlayer1_4.getText());
         txt.setVisible(true);
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
+        pnlArr[i][j].setIs_used(true);
+        pnlArr[i][j].setSameTurn(true);
         setIsPanelSelected(false);
         btnPlayer1_4.setEnabled(false);
     }//GEN-LAST:event_btnPlayer1_4ActionPerformed
@@ -805,6 +827,8 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setText(btnPlayer1_5.getText());
         txt.setVisible(true);
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
+        pnlArr[i][j].setIs_used(true);
+        pnlArr[i][j].setSameTurn(true);
         setIsPanelSelected(false);
         btnPlayer1_5.setEnabled(false);
     }//GEN-LAST:event_btnPlayer1_5ActionPerformed
@@ -820,6 +844,8 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setText(btnPlayer1_6.getText());
         txt.setVisible(true);
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
+        pnlArr[i][j].setIs_used(true);
+        pnlArr[i][j].setSameTurn(true);
         setIsPanelSelected(false);
         btnPlayer1_6.setEnabled(false);
     }//GEN-LAST:event_btnPlayer1_6ActionPerformed
@@ -835,6 +861,8 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setText(btnPlayer1_7.getText());
         txt.setVisible(true);
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
+        pnlArr[i][j].setIs_used(true);
+        pnlArr[i][j].setSameTurn(true);
         setIsPanelSelected(false);
         btnPlayer1_7.setEnabled(false);
     }//GEN-LAST:event_btnPlayer1_7ActionPerformed
@@ -850,6 +878,8 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setText(btnPlayer2_2.getText());
         txt.setVisible(true);
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
+        pnlArr[i][j].setIs_used(true);
+        pnlArr[i][j].setSameTurn(true);
         setIsPanelSelected(false);
         btnPlayer2_2.setEnabled(false);
     }//GEN-LAST:event_btnPlayer2_2ActionPerformed
@@ -865,6 +895,8 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setText(btnPlayer2_3.getText());
         txt.setVisible(true);
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
+        pnlArr[i][j].setIs_used(true);
+        pnlArr[i][j].setSameTurn(true);
         setIsPanelSelected(false);
         btnPlayer2_3.setEnabled(false);
     }//GEN-LAST:event_btnPlayer2_3ActionPerformed
@@ -880,6 +912,8 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setText(btnPlayer2_4.getText());
         txt.setVisible(true);
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
+        pnlArr[i][j].setIs_used(true);
+        pnlArr[i][j].setSameTurn(true);
         setIsPanelSelected(false);
         btnPlayer2_4.setEnabled(false);
     }//GEN-LAST:event_btnPlayer2_4ActionPerformed
@@ -895,6 +929,8 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setText(btnPlayer2_5.getText());
         txt.setVisible(true);
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
+        pnlArr[i][j].setIs_used(true);
+        pnlArr[i][j].setSameTurn(true);
         setIsPanelSelected(false);
         btnPlayer2_5.setEnabled(false);
     }//GEN-LAST:event_btnPlayer2_5ActionPerformed
@@ -910,6 +946,8 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setText(btnPlayer2_6.getText());
         txt.setVisible(true);
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
+        pnlArr[i][j].setIs_used(true);
+        pnlArr[i][j].setSameTurn(true);
         setIsPanelSelected(false);
         btnPlayer2_6.setEnabled(false);
     }//GEN-LAST:event_btnPlayer2_6ActionPerformed
@@ -925,6 +963,8 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setText(btnPlayer2_7.getText());
         txt.setVisible(true);
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
+        pnlArr[i][j].setIs_used(true);
+        pnlArr[i][j].setSameTurn(true);
         setIsPanelSelected(false);
         btnPlayer2_7.setEnabled(false);
     }//GEN-LAST:event_btnPlayer2_7ActionPerformed
@@ -935,6 +975,7 @@ public class Screen3 extends javax.swing.JFrame {
         int j = getCurrJ();
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
         setIsPanelSelected(false);
+        if (!pnlArr[i][j].getIs_used() || !pnlArr[i][j].getSameTurn()) return;
         if (pnlArr[i][j].getComponentCount() == 0) return;
         Component c = pnlArr[i][j].getComponent(0);
         String letter = ((JLabel)c).getText();
@@ -949,6 +990,7 @@ public class Screen3 extends javax.swing.JFrame {
         int j = getCurrJ();
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
         setIsPanelSelected(false);
+        if (!pnlArr[i][j].getIs_used() || !pnlArr[i][j].getSameTurn()) return;
         if (pnlArr[i][j].getComponentCount() == 0) return;
         Component c = pnlArr[i][j].getComponent(0);
         String letter = ((JLabel)c).getText();
@@ -956,6 +998,32 @@ public class Screen3 extends javax.swing.JFrame {
         pnlArr[i][j].remove(c);
         pnlArr[i][j].repaint();
     }//GEN-LAST:event_btnBack2ActionPerformed
+
+    private void btnReady1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReady1ActionPerformed
+        for (int i = 0; i < 15; ++i)
+        {
+            for (int j = 0; j < 15; ++j)
+            {
+                if (pnlArr[i][j].getIs_used())
+                {
+                    pnlArr[i][j].setSameTurn(false);
+                }
+            }
+        }
+    }//GEN-LAST:event_btnReady1ActionPerformed
+
+    private void btnReady2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReady2ActionPerformed
+        for (int i = 0; i < 15; ++i)
+        {
+            for (int j = 0; j < 15; ++j)
+            {
+                if (pnlArr[i][j].getIs_used())
+                {
+                    pnlArr[i][j].setSameTurn(false);
+                }
+            }
+        }
+    }//GEN-LAST:event_btnReady2ActionPerformed
 
     private String getLetterPoints(String letter)
     {
