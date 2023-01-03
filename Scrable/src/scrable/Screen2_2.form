@@ -177,7 +177,7 @@
                   <Color blue="33" green="33" red="ff" type="rgb"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="&#x41d;&#x435; &#x43c;&#x43e;&#x433;&#x430;&#x442; &#x434;&#x430; &#x441;&#x435; &#x438;&#x437;&#x43f;&#x43e;&#x43b;&#x437;&#x432;&#x430;&#x442; &#x441;&#x438;&#x43c;&#x432;&#x43e;&#x43b;&#x438;&#x442;&#x435;: /, @, ~, _ , -, $."/>
+                <Property name="text" type="java.lang.String" value="&#x41d;&#x435;&#x432;&#x430;&#x43b;&#x438;&#x434;&#x435;&#x43d; username!!!"/>
               </Properties>
             </Component>
           </SubComponents>
@@ -246,7 +246,7 @@
                       <Component id="lblWarning2" min="-2" pref="55" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                       <Component id="btnOk2" min="-2" pref="62" max="-2" attributes="0"/>
-                      <EmptySpace pref="132" max="32767" attributes="0"/>
+                      <EmptySpace pref="133" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -295,7 +295,7 @@
                   <Color blue="33" green="33" red="ff" type="rgb"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="&#x41d;&#x435; &#x43c;&#x43e;&#x433;&#x430;&#x442; &#x434;&#x430; &#x441;&#x435; &#x438;&#x437;&#x43f;&#x43e;&#x43b;&#x437;&#x432;&#x430;&#x442; &#x441;&#x438;&#x43c;&#x432;&#x43e;&#x43b;&#x438;&#x442;&#x435;: /, @, ~, _ , -, $."/>
+                <Property name="text" type="java.lang.String" value="&#x41d;&#x435;&#x432;&#x430;&#x43b;&#x438;&#x434;&#x435;&#x43d; username!!!"/>
               </Properties>
             </Component>
           </SubComponents>

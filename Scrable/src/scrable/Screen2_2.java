@@ -78,7 +78,7 @@ public class Screen2_2 extends javax.swing.JFrame {
 
         lblWarning1.setForeground(new java.awt.Color(255, 51, 51));
         lblWarning1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblWarning1.setText("Не могат да се използват символите: /, @, ~, _ , -, $.");
+        lblWarning1.setText("Невалиден username!!!");
 
         javax.swing.GroupLayout pnlPlayer1Layout = new javax.swing.GroupLayout(pnlPlayer1);
         pnlPlayer1.setLayout(pnlPlayer1Layout);
@@ -142,7 +142,7 @@ public class Screen2_2 extends javax.swing.JFrame {
 
         lblWarning2.setForeground(new java.awt.Color(255, 51, 51));
         lblWarning2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblWarning2.setText("Не могат да се използват символите: /, @, ~, _ , -, $.");
+        lblWarning2.setText("Невалиден username!!!");
 
         javax.swing.GroupLayout pnlPlayer2Layout = new javax.swing.GroupLayout(pnlPlayer2);
         pnlPlayer2.setLayout(pnlPlayer2Layout);
@@ -173,7 +173,7 @@ public class Screen2_2 extends javax.swing.JFrame {
                 .addComponent(lblWarning2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(17, 17, 17)
                 .addComponent(btnOk2, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(132, Short.MAX_VALUE))
+                .addContainerGap(133, Short.MAX_VALUE))
         );
 
         btnContinue.setBackground(new java.awt.Color(137, 102, 163));
@@ -212,7 +212,7 @@ public class Screen2_2 extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pnlScreen2_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(pnlPlayer1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnlPlayer2, javax.swing.GroupLayout.DEFAULT_SIZE, 402, Short.MAX_VALUE))
+                    .addComponent(pnlPlayer2, javax.swing.GroupLayout.DEFAULT_SIZE, 403, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(btnContinue, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(19, Short.MAX_VALUE))

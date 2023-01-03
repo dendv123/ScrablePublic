@@ -46,11 +46,8 @@ public class Screen3 extends javax.swing.JFrame {
     public Screen3() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
-        //btnLegend.setVisible(false);
         arr();
         setTitle("Скрабъл");
-        //pnlPlayer1.setVisible(false);
-        //pnlPlayer2.setVisible(false);
         setIsPanelSelected(false);
         enablePlayer1();
         btnPlayer1_agree.setVisible(false);
@@ -59,8 +56,8 @@ public class Screen3 extends javax.swing.JFrame {
         setCurrI(7);
         setCurrJ(7);
         setIsPanelSelected(true);
-        //lblName1.setText(Screen2_2.getTxtPlayer1Name().getText());
-        //lblName2.setText(Screen2_2.getTxtPlayer2Name().getText());
+        lblName1.setText(Screen2_2.getTxtPlayer1Name().getText());
+        lblName2.setText(Screen2_2.getTxtPlayer2Name().getText());
         for (int i = 2; i < 9; ++i)
         {
             Component btn = pnlPlayer2.getComponent(i);
@@ -749,11 +746,14 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
         txt.setText(btnPlayer1_1.getText());
         txt.setVisible(true);
+        removeLetter(txt.getText());
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
         pnlArr[i][j].setIs_used(true);
         pnlArr[i][j].setSameTurn(true);
         setIsPanelSelected(false);
         btnPlayer1_1.setEnabled(false);
+        btnNewLetters1.setEnabled(false);
+        btnNewLetters2.setEnabled(false);
     }//GEN-LAST:event_btnPlayer1_1ActionPerformed
 
     private void btnNewLetters1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewLetters1ActionPerformed
@@ -783,11 +783,14 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
         txt.setText(btnPlayer2_1.getText());
         txt.setVisible(true);
+        removeLetter(txt.getText());
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
         pnlArr[i][j].setIs_used(true);
         pnlArr[i][j].setSameTurn(true);
         setIsPanelSelected(false);
         btnPlayer2_1.setEnabled(false);
+        btnNewLetters1.setEnabled(false);
+        btnNewLetters2.setEnabled(false);
     }//GEN-LAST:event_btnPlayer2_1ActionPerformed
 
     private void btnNewLetters2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewLetters2ActionPerformed
@@ -817,11 +820,14 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
         txt.setText(btnPlayer1_2.getText());
         txt.setVisible(true);
+        removeLetter(txt.getText());
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
         pnlArr[i][j].setIs_used(true);
         pnlArr[i][j].setSameTurn(true);
         setIsPanelSelected(false);
         btnPlayer1_2.setEnabled(false);
+        btnNewLetters1.setEnabled(false);
+        btnNewLetters2.setEnabled(false);
     }//GEN-LAST:event_btnPlayer1_2ActionPerformed
 
     private void btnPlayer1_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer1_3ActionPerformed
@@ -834,11 +840,14 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
         txt.setText(btnPlayer1_3.getText());
         txt.setVisible(true);
+        removeLetter(txt.getText());
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
         pnlArr[i][j].setIs_used(true);
         pnlArr[i][j].setSameTurn(true);
         setIsPanelSelected(false);
         btnPlayer1_3.setEnabled(false);
+        btnNewLetters1.setEnabled(false);
+        btnNewLetters2.setEnabled(false);
     }//GEN-LAST:event_btnPlayer1_3ActionPerformed
 
     private void btnPlayer1_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer1_4ActionPerformed
@@ -851,11 +860,14 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
         txt.setText(btnPlayer1_4.getText());
         txt.setVisible(true);
+        removeLetter(txt.getText());
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
         pnlArr[i][j].setIs_used(true);
         pnlArr[i][j].setSameTurn(true);
         setIsPanelSelected(false);
         btnPlayer1_4.setEnabled(false);
+        btnNewLetters1.setEnabled(false);
+        btnNewLetters2.setEnabled(false);
     }//GEN-LAST:event_btnPlayer1_4ActionPerformed
 
     private void btnPlayer1_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer1_5ActionPerformed
@@ -868,11 +880,14 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
         txt.setText(btnPlayer1_5.getText());
         txt.setVisible(true);
+        removeLetter(txt.getText());
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
         pnlArr[i][j].setIs_used(true);
         pnlArr[i][j].setSameTurn(true);
         setIsPanelSelected(false);
         btnPlayer1_5.setEnabled(false);
+        btnNewLetters1.setEnabled(false);
+        btnNewLetters2.setEnabled(false);
     }//GEN-LAST:event_btnPlayer1_5ActionPerformed
 
     private void btnPlayer1_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer1_6ActionPerformed
@@ -885,11 +900,14 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
         txt.setText(btnPlayer1_6.getText());
         txt.setVisible(true);
+        removeLetter(txt.getText());
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
         pnlArr[i][j].setIs_used(true);
         pnlArr[i][j].setSameTurn(true);
         setIsPanelSelected(false);
         btnPlayer1_6.setEnabled(false);
+        btnNewLetters1.setEnabled(false);
+        btnNewLetters2.setEnabled(false);
     }//GEN-LAST:event_btnPlayer1_6ActionPerformed
 
     private void btnPlayer1_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer1_7ActionPerformed
@@ -902,11 +920,14 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
         txt.setText(btnPlayer1_7.getText());
         txt.setVisible(true);
+        removeLetter(txt.getText());
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
         pnlArr[i][j].setIs_used(true);
         pnlArr[i][j].setSameTurn(true);
         setIsPanelSelected(false);
         btnPlayer1_7.setEnabled(false);
+        btnNewLetters1.setEnabled(false);
+        btnNewLetters2.setEnabled(false);
     }//GEN-LAST:event_btnPlayer1_7ActionPerformed
 
     private void btnPlayer2_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer2_2ActionPerformed
@@ -919,11 +940,14 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
         txt.setText(btnPlayer2_2.getText());
         txt.setVisible(true);
+        removeLetter(txt.getText());
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
         pnlArr[i][j].setIs_used(true);
         pnlArr[i][j].setSameTurn(true);
         setIsPanelSelected(false);
         btnPlayer2_2.setEnabled(false);
+        btnNewLetters1.setEnabled(false);
+        btnNewLetters2.setEnabled(false);
     }//GEN-LAST:event_btnPlayer2_2ActionPerformed
 
     private void btnPlayer2_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer2_3ActionPerformed
@@ -936,11 +960,14 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
         txt.setText(btnPlayer2_3.getText());
         txt.setVisible(true);
+        removeLetter(txt.getText());
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
         pnlArr[i][j].setIs_used(true);
         pnlArr[i][j].setSameTurn(true);
         setIsPanelSelected(false);
         btnPlayer2_3.setEnabled(false);
+        btnNewLetters1.setEnabled(false);
+        btnNewLetters2.setEnabled(false);
     }//GEN-LAST:event_btnPlayer2_3ActionPerformed
 
     private void btnPlayer2_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer2_4ActionPerformed
@@ -953,11 +980,14 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
         txt.setText(btnPlayer2_4.getText());
         txt.setVisible(true);
+        removeLetter(txt.getText());
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
         pnlArr[i][j].setIs_used(true);
         pnlArr[i][j].setSameTurn(true);
         setIsPanelSelected(false);
         btnPlayer2_4.setEnabled(false);
+        btnNewLetters1.setEnabled(false);
+        btnNewLetters2.setEnabled(false);
     }//GEN-LAST:event_btnPlayer2_4ActionPerformed
 
     private void btnPlayer2_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer2_5ActionPerformed
@@ -970,11 +1000,14 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
         txt.setText(btnPlayer2_5.getText());
         txt.setVisible(true);
+        removeLetter(txt.getText());
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
         pnlArr[i][j].setIs_used(true);
         pnlArr[i][j].setSameTurn(true);
         setIsPanelSelected(false);
         btnPlayer2_5.setEnabled(false);
+        btnNewLetters1.setEnabled(false);
+        btnNewLetters2.setEnabled(false);
     }//GEN-LAST:event_btnPlayer2_5ActionPerformed
 
     private void btnPlayer2_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer2_6ActionPerformed
@@ -987,11 +1020,14 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
         txt.setText(btnPlayer2_6.getText());
         txt.setVisible(true);
+        removeLetter(txt.getText());
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
         pnlArr[i][j].setIs_used(true);
         pnlArr[i][j].setSameTurn(true);
         setIsPanelSelected(false);
         btnPlayer2_6.setEnabled(false);
+        btnNewLetters1.setEnabled(false);
+        btnNewLetters2.setEnabled(false);
     }//GEN-LAST:event_btnPlayer2_6ActionPerformed
 
     private void btnPlayer2_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer2_7ActionPerformed
@@ -1004,11 +1040,14 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
         txt.setText(btnPlayer2_7.getText());
         txt.setVisible(true);
+        removeLetter(txt.getText());
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
         pnlArr[i][j].setIs_used(true);
         pnlArr[i][j].setSameTurn(true);
         setIsPanelSelected(false);
         btnPlayer2_7.setEnabled(false);
+        btnNewLetters1.setEnabled(false);
+        btnNewLetters2.setEnabled(false);
     }//GEN-LAST:event_btnPlayer2_7ActionPerformed
 
     private void btnBack1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBack1ActionPerformed
@@ -1025,6 +1064,12 @@ public class Screen3 extends javax.swing.JFrame {
         addLetter(letter);
         pnlArr[i][j].remove(c);
         pnlArr[i][j].repaint();
+        for (int k = 2; k < 9; ++k)
+        {
+            Component comp = pnlPlayer1.getComponent(k);
+            if (!((JButton)comp).isEnabled()) return;
+        }
+        btnNewLetters1.setEnabled(true);
     }//GEN-LAST:event_btnBack1ActionPerformed
 
     private void btnBack2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBack2ActionPerformed
@@ -1041,6 +1086,12 @@ public class Screen3 extends javax.swing.JFrame {
         addLetter(letter);
         pnlArr[i][j].remove(c);
         pnlArr[i][j].repaint();
+        for (int k = 2; k < 9; ++k)
+        {
+            Component comp = pnlPlayer2.getComponent(k);
+            if (!((JButton)comp).isEnabled()) return;
+        }
+        btnNewLetters2.setEnabled(true);
     }//GEN-LAST:event_btnBack2ActionPerformed
 
     private void btnReady1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReady1ActionPerformed

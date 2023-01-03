@@ -10,6 +10,6 @@ package scrable;
  */
 public class Main extends Screen_1 {
     public static void main(String[] args) {
-        Screen3.Run();
+        Run();
     }
 }
