@@ -1,7 +1,17 @@
 package scrable;
+
+import javax.swing.JTextField;
+
 public class Screen2_2 extends javax.swing.JFrame {
 
     
+    public static JTextField getTxtPlayer1Name() {
+        return txtPlayer1Name;
+    }
+
+    public static JTextField getTxtPlayer2Name() {
+        return txtPlayer2Name;
+    }
     /**
      * Creates new form Screen_2
      */
@@ -9,6 +19,9 @@ public class Screen2_2 extends javax.swing.JFrame {
         initComponents();
         lblWarning1.setVisible(false);
         lblWarning2.setVisible(false);
+        setTitle("Вход");
+        btnContinue.setVisible(false);
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -48,6 +61,11 @@ public class Screen2_2 extends javax.swing.JFrame {
         lblPlayer1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         txtPlayer1Name.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        txtPlayer1Name.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPlayer1NameActionPerformed(evt);
+            }
+        });
 
         btnOk1.setBackground(new java.awt.Color(137, 102, 163));
         btnOk1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
@@ -228,27 +246,48 @@ public class Screen2_2 extends javax.swing.JFrame {
         {
             txtPlayer1Name.enable(false);
             btnOk1.setVisible(false);
+            btnOk1.setEnabled(false);
+            if(!btnOk2.isEnabled()&&!btnOk1.isEnabled())
+            {
+               btnContinue.setVisible(true);
+            }
         }
     }//GEN-LAST:event_btnOk1ActionPerformed
 
     private void btnOk2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOk2ActionPerformed
         if (!Screen2.setUsername(txtPlayer2Name.getText()))
         {
-            lblWarning1.setVisible(true);
+            lblWarning2.setVisible(true);
         }
         else
         {
             txtPlayer2Name.enable(false);
             btnOk2.setVisible(false);
+            btnOk2.setEnabled(false);
+            if(!btnOk2.isEnabled()&&!btnOk1.isEnabled())
+            {
+               btnContinue.setVisible(true);
+            }
         }
     }//GEN-LAST:event_btnOk2ActionPerformed
 
     private void btnContinueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContinueActionPerformed
+<<<<<<< HEAD
        dispose();
        Screen2 obj=new Screen2();
        obj.importUsername(txtPlayer1Name.getText() + "\n" + txtPlayer2Name.getText());            
       // new Screen3_2().setVisible(true);
+=======
+        dispose();
+        Screen2 OBJ=new Screen2();
+        OBJ.importUsername(txtPlayer1Name.getText() + "\n" + txtPlayer2Name.getText() + "\n");
+        new Screen3().setVisible(true);
+>>>>>>> e5b3d58b62dfed3e0685c982c49794824f0054ed
     }//GEN-LAST:event_btnContinueActionPerformed
+
+    private void txtPlayer1NameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPlayer1NameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPlayer1NameActionPerformed
 
     /**
      * @param args the command line arguments
@@ -298,7 +337,7 @@ public class Screen2_2 extends javax.swing.JFrame {
     private javax.swing.JPanel pnlPlayer1;
     private javax.swing.JPanel pnlPlayer2;
     private javax.swing.JPanel pnlScreen2_2;
-    private javax.swing.JTextField txtPlayer1Name;
-    private javax.swing.JTextField txtPlayer2Name;
+    private static javax.swing.JTextField txtPlayer1Name;
+    private static javax.swing.JTextField txtPlayer2Name;
     // End of variables declaration//GEN-END:variables
 }
