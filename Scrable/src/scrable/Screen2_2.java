@@ -245,9 +245,8 @@ public class Screen2_2 extends javax.swing.JFrame {
 
     private void btnContinueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContinueActionPerformed
        dispose();
-       Screen2 OBJ=new Screen2();
-               
-            OBJ.importUsername(txtPlayer1Name.getText() + "\n" + txtPlayer2Name.getText());
+       Screen2 obj=new Screen2();
+       obj.importUsername(txtPlayer1Name.getText() + "\n" + txtPlayer2Name.getText());            
       // new Screen3_2().setVisible(true);
     }//GEN-LAST:event_btnContinueActionPerformed
 
