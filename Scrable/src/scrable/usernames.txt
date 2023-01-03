@@ -1,1 +1,8 @@
 
+<<<<<<< HEAD
+=======
+go0go
+jijo
+hh
+kk
+>>>>>>> Gabi

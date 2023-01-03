@@ -61,20 +61,16 @@ public class Screen3 extends javax.swing.JFrame {
         setIsPanelSelected(true);
         //lblName1.setText(Screen2_2.getTxtPlayer1Name().getText());
         //lblName2.setText(Screen2_2.getTxtPlayer2Name().getText());
-        btnPlayer1_1.setText(""+letters[rand.nextInt(102)]);
-        btnPlayer1_2.setText(""+letters[rand.nextInt(102)]);
-        btnPlayer1_3.setText(""+letters[rand.nextInt(102)]);
-        btnPlayer1_4.setText(""+letters[rand.nextInt(102)]);
-        btnPlayer1_5.setText(""+letters[rand.nextInt(102)]);
-        btnPlayer1_6.setText(""+letters[rand.nextInt(102)]);
-        btnPlayer1_7.setText(""+letters[rand.nextInt(102)]);
-        btnPlayer2_1.setText(""+letters[rand.nextInt(102)]);
-        btnPlayer2_2.setText(""+letters[rand.nextInt(102)]);
-        btnPlayer2_3.setText(""+letters[rand.nextInt(102)]);
-        btnPlayer2_4.setText(""+letters[rand.nextInt(102)]);
-        btnPlayer2_5.setText(""+letters[rand.nextInt(102)]);
-        btnPlayer2_6.setText(""+letters[rand.nextInt(102)]);
-        btnPlayer2_7.setText(""+letters[rand.nextInt(102)]);
+        for (int i = 2; i < 9; ++i)
+        {
+            Component btn = pnlPlayer2.getComponent(i);
+            ((JButton)btn).setText(randomLetter());
+            removeLetter(((JButton)btn).getText());
+            btn = pnlPlayer1.getComponent(i);
+            ((JButton)btn).setText(randomLetter());
+            removeLetter(((JButton)btn).getText());
+        }
+        
     }
 
     /**
@@ -794,13 +790,18 @@ public class Screen3 extends javax.swing.JFrame {
     }//GEN-LAST:event_btnPlayer1_1ActionPerformed
 
     private void btnNewLetters1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewLetters1ActionPerformed
-        btnPlayer1_1.setText(""+letters[rand.nextInt(102)]);
-        btnPlayer1_2.setText(""+letters[rand.nextInt(102)]);
-        btnPlayer1_3.setText(""+letters[rand.nextInt(102)]);
-        btnPlayer1_4.setText(""+letters[rand.nextInt(102)]);
-        btnPlayer1_5.setText(""+letters[rand.nextInt(102)]);
-        btnPlayer1_6.setText(""+letters[rand.nextInt(102)]);
-        btnPlayer1_7.setText(""+letters[rand.nextInt(102)]);
+        for (int i = 2; i < 9; ++i)
+        {
+            Component btn = pnlPlayer1.getComponent(i);
+            for (int j = 0; j < 100; j++) {
+               if(letters[j].equals(""))
+               {
+                   letters[j]=((JButton)btn).getText();
+               }
+            }
+            ((JButton)btn).setText(randomLetter());
+            removeLetter(((JButton)btn).getText());
+        }
         enablePlayer2();
         for (int i = 13; i <= 19; ++i)
         {
@@ -828,13 +829,18 @@ public class Screen3 extends javax.swing.JFrame {
     }//GEN-LAST:event_btnPlayer2_1ActionPerformed
 
     private void btnNewLetters2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewLetters2ActionPerformed
-        btnPlayer2_1.setText(""+letters[rand.nextInt(102)]);
-        btnPlayer2_2.setText(""+letters[rand.nextInt(102)]);
-        btnPlayer2_3.setText(""+letters[rand.nextInt(102)]);
-        btnPlayer2_4.setText(""+letters[rand.nextInt(102)]);
-        btnPlayer2_5.setText(""+letters[rand.nextInt(102)]);
-        btnPlayer2_6.setText(""+letters[rand.nextInt(102)]);
-        btnPlayer2_7.setText(""+letters[rand.nextInt(102)]);
+        for (int i = 2; i < 9; ++i)
+        {
+            Component btn = pnlPlayer2.getComponent(i);
+            for (int j = 0; j < 100; j++) {
+               if(letters[j].equals(""))
+               {
+                   letters[j]=((JButton)btn).getText();
+               }
+            }
+            ((JButton)btn).setText(randomLetter());
+            removeLetter(((JButton)btn).getText());
+        }
         enablePlayer1();
         for (int i = 13; i <= 19; ++i)
         {
@@ -1518,6 +1524,28 @@ public class Screen3 extends javax.swing.JFrame {
         btnBack1.setEnabled(false);
         btnReady1.setEnabled(false);
         btnNewLetters1.setEnabled(false);
+    }
+    
+    private String randomLetter()
+    {
+        String answ;
+        do
+        {
+            answ =  letters[rand.nextInt(100)];
+        }while(answ.equals(""));
+        return answ;
+    }
+    
+    private void removeLetter(String letter)
+    {
+        for (int i = 0; i < 100; i++) 
+        {
+           if(letter.equals(letters[i]))
+           {
+               letters[i]="";
+               return;
+           }
+        }
     }
     
     public static void Run() {
