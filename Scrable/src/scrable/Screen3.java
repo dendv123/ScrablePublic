@@ -1085,10 +1085,18 @@ public class Screen3 extends javax.swing.JFrame {
     }//GEN-LAST:event_btnBack2ActionPerformed
 
     private void btnReady1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReady1ActionPerformed
+        if (pnlArr[getCurrI()][getCurrJ()].getComponentCount() == 0) 
+        {
+            JOptionPane.showMessageDialog(null, "Непълен запис", "Грешка", JOptionPane.PLAIN_MESSAGE);
+        }
         btnPlayer2_agree.setVisible(true);
     }//GEN-LAST:event_btnReady1ActionPerformed
 
     private void btnReady2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReady2ActionPerformed
+        if (pnlArr[getCurrI()][getCurrJ()].getComponentCount() == 0) 
+        {
+            JOptionPane.showMessageDialog(null, "Непълен запис", "Грешка", JOptionPane.PLAIN_MESSAGE);
+        }
         btnPlayer1_agree.setVisible(true);
     }//GEN-LAST:event_btnReady2ActionPerformed
 
