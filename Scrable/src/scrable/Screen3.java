@@ -289,6 +289,8 @@ public class Screen3 extends javax.swing.JFrame {
         btnBack2 = new javax.swing.JButton();
         btnNewLetters2 = new javax.swing.JButton();
         btnPlayer2_agree = new javax.swing.JButton();
+        btnGiveUp1 = new javax.swing.JButton();
+        btnGiveUp2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(24, 77, 31));
@@ -632,6 +634,22 @@ public class Screen3 extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        btnGiveUp1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        btnGiveUp1.setText("Предавам се");
+        btnGiveUp1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGiveUp1ActionPerformed(evt);
+            }
+        });
+
+        btnGiveUp2.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        btnGiveUp2.setText("Предавам се");
+        btnGiveUp2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGiveUp2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout pnlFullLayout = new javax.swing.GroupLayout(pnlFull);
         pnlFull.setLayout(pnlFullLayout);
         pnlFullLayout.setHorizontalGroup(
@@ -640,11 +658,19 @@ public class Screen3 extends javax.swing.JFrame {
                 .addGap(0, 1159, Short.MAX_VALUE)
                 .addComponent(btnLegend))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFullLayout.createSequentialGroup()
-                .addContainerGap(570, Short.MAX_VALUE)
-                .addGroup(pnlFullLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(pnlPlayer2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnlPlayer1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(58, 58, 58))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(pnlFullLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFullLayout.createSequentialGroup()
+                        .addGroup(pnlFullLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(pnlPlayer2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(pnlPlayer1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(58, 58, 58))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFullLayout.createSequentialGroup()
+                        .addComponent(btnGiveUp1)
+                        .addGap(73, 73, 73))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFullLayout.createSequentialGroup()
+                        .addComponent(btnGiveUp2)
+                        .addGap(73, 73, 73))))
         );
         pnlFullLayout.setVerticalGroup(
             pnlFullLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -652,9 +678,13 @@ public class Screen3 extends javax.swing.JFrame {
                 .addComponent(btnLegend)
                 .addGap(43, 43, 43)
                 .addComponent(pnlPlayer1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(61, 61, 61)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnGiveUp1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(pnlPlayer2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(126, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnGiveUp2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(47, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -1162,6 +1192,22 @@ public class Screen3 extends javax.swing.JFrame {
         enablePlayer2();
     }//GEN-LAST:event_btnPlayer2_agreeActionPerformed
 
+    private void btnGiveUp1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGiveUp1ActionPerformed
+        dispose();
+        new Screen4().setVisible(true);
+        System.out.println(lblName1.getText());
+        Screen4.lblWin.setText(lblName2.getText().toUpperCase() + " " + Screen4.lblWin.getText());
+        Screen4.lblWithPts.setText(Screen4.lblWithPts.getText() + " " + lblPoints2.getText() + " points");
+    }//GEN-LAST:event_btnGiveUp1ActionPerformed
+
+    private void btnGiveUp2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGiveUp2ActionPerformed
+        dispose();
+        new Screen4().setVisible(true);
+        System.out.println(lblName1.getText());
+        Screen4.lblWin.setText(lblName1.getText().toUpperCase() + " " + Screen4.lblWin.getText());
+        Screen4.lblWithPts.setText(Screen4.lblWithPts.getText() + " " + lblPoints1.getText() + " points");
+    }//GEN-LAST:event_btnGiveUp2ActionPerformed
+
     private String getLetterPoints(String letter)
     {
         String ans = "";
@@ -1510,6 +1556,7 @@ public class Screen3 extends javax.swing.JFrame {
         btnBack1.setEnabled(true);
         btnReady1.setEnabled(true);
         btnNewLetters1.setEnabled(true);
+        btnGiveUp1.setEnabled(true);
         
         btnPlayer2_1.setEnabled(false);
         btnPlayer2_2.setEnabled(false);
@@ -1521,6 +1568,7 @@ public class Screen3 extends javax.swing.JFrame {
         btnBack2.setEnabled(false);
         btnReady2.setEnabled(false);
         btnNewLetters2.setEnabled(false);
+        btnGiveUp2.setEnabled(false);
     }
     
     private void enablePlayer2()
@@ -1535,6 +1583,7 @@ public class Screen3 extends javax.swing.JFrame {
         btnBack2.setEnabled(true);
         btnReady2.setEnabled(true);
         btnNewLetters2.setEnabled(true);
+        btnGiveUp2.setEnabled(true);
         
         btnPlayer1_1.setEnabled(false);
         btnPlayer1_2.setEnabled(false);
@@ -1546,6 +1595,7 @@ public class Screen3 extends javax.swing.JFrame {
         btnBack1.setEnabled(false);
         btnReady1.setEnabled(false);
         btnNewLetters1.setEnabled(false);
+        btnGiveUp1.setEnabled(false);
     }
     
     private String randomLetter()
@@ -1614,6 +1664,8 @@ public class Screen3 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack1;
     private javax.swing.JButton btnBack2;
+    private javax.swing.JButton btnGiveUp1;
+    private javax.swing.JButton btnGiveUp2;
     private javax.swing.JButton btnLegend;
     private javax.swing.JButton btnNewLetters1;
     private javax.swing.JButton btnNewLetters2;
