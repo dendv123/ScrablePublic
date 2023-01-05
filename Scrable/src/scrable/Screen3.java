@@ -311,7 +311,7 @@ public class Screen3 extends javax.swing.JFrame {
         pnlPlayer1.setBackground(new java.awt.Color(27, 77, 31));
         pnlPlayer1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
-        lblName1.setFont(new java.awt.Font("Times New Roman", 2, 24)); // NOI18N
+        lblName1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         lblName1.setForeground(new java.awt.Color(204, 204, 204));
         lblName1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblName1.setText("Играч 1");
@@ -475,7 +475,7 @@ public class Screen3 extends javax.swing.JFrame {
         pnlPlayer2.setBackground(new java.awt.Color(27, 77, 31));
         pnlPlayer2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
-        lblName2.setFont(new java.awt.Font("Times New Roman", 2, 24)); // NOI18N
+        lblName2.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         lblName2.setForeground(new java.awt.Color(204, 204, 204));
         lblName2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblName2.setText("Играч 2");
