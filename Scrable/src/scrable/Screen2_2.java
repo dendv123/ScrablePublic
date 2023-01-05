@@ -78,7 +78,7 @@ public class Screen2_2 extends javax.swing.JFrame {
 
         lblWarning1.setForeground(new java.awt.Color(255, 51, 51));
         lblWarning1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblWarning1.setText("Невалиден username!!!");
+        lblWarning1.setText("Username може да съдържа само букви на латиница, цифри и \"_\" !");
 
         javax.swing.GroupLayout pnlPlayer1Layout = new javax.swing.GroupLayout(pnlPlayer1);
         pnlPlayer1.setLayout(pnlPlayer1Layout);
@@ -92,9 +92,12 @@ public class Screen2_2 extends javax.swing.JFrame {
                 .addContainerGap(34, Short.MAX_VALUE)
                 .addGroup(pnlPlayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(txtPlayer1Name)
-                    .addComponent(lblPlayer1, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE)
-                    .addComponent(lblWarning1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblPlayer1, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE))
                 .addGap(30, 30, 30))
+            .addGroup(pnlPlayer1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblWarning1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         pnlPlayer1Layout.setVerticalGroup(
             pnlPlayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -142,7 +145,7 @@ public class Screen2_2 extends javax.swing.JFrame {
 
         lblWarning2.setForeground(new java.awt.Color(255, 51, 51));
         lblWarning2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblWarning2.setText("Невалиден username!!!");
+        lblWarning2.setText("Username може да съдържа само букви на латиница, цифри и \"_\" !");
 
         javax.swing.GroupLayout pnlPlayer2Layout = new javax.swing.GroupLayout(pnlPlayer2);
         pnlPlayer2.setLayout(pnlPlayer2Layout);
@@ -150,19 +153,19 @@ public class Screen2_2 extends javax.swing.JFrame {
             pnlPlayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlPlayer2Layout.createSequentialGroup()
                 .addGroup(pnlPlayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblWarning2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(pnlPlayer2Layout.createSequentialGroup()
-                        .addGap(127, 127, 127)
-                        .addComponent(btnOk2, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pnlPlayer2Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addGroup(pnlPlayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblWarning2, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblPlayer2Name, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlPlayer2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(txtPlayer2Name, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(4, 4, 4)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(pnlPlayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtPlayer2Name, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(pnlPlayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(pnlPlayer2Layout.createSequentialGroup()
+                                    .addGap(127, 127, 127)
+                                    .addComponent(btnOk2, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(pnlPlayer2Layout.createSequentialGroup()
+                                    .addGap(30, 30, 30)
+                                    .addComponent(lblPlayer2Name, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         pnlPlayer2Layout.setVerticalGroup(
             pnlPlayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

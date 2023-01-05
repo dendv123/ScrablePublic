@@ -45,6 +45,7 @@ public class Screen3 extends javax.swing.JFrame {
     
     public Screen3() {
         initComponents();
+        countLetters();
         setExtendedState(MAXIMIZED_BOTH);
         arr();
         setTitle("Скрабъл");
@@ -248,6 +249,7 @@ public class Screen3 extends javax.swing.JFrame {
             letPoints.setText(getLetterPoints(btnPlayer2_7.getText()));
             letPoints.setVisible(true);
         }
+        countLetters();
     }
  
     /**
@@ -776,7 +778,6 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
         txt.setText(btnPlayer1_1.getText());
         txt.setVisible(true);
-        removeLetter(txt.getText());
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
         pnlArr[i][j].setIs_used(true);
         pnlArr[i][j].setSameTurn(true);
@@ -793,14 +794,15 @@ public class Screen3 extends javax.swing.JFrame {
             addLetter(((JButton)btn).getText());
             ((JButton)btn).setText(randomLetter());
             removeLetter(((JButton)btn).getText());
-        }
+        } // adds and removes from letters array
         enablePlayer2();
         for (int i = 13; i <= 19; ++i)
         {
             Component pts = pnlPlayer1.getComponent(i);
             Component btn = pnlPlayer1.getComponent(i - 11);
             ((JLabel)pts).setText(getLetterPoints(((JButton)btn).getText()));
-        }
+        } // sets points for each letter
+        countLetters();
     }//GEN-LAST:event_btnNewLetters1ActionPerformed
 
     private void btnPlayer2_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer2_1ActionPerformed
@@ -813,7 +815,6 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
         txt.setText(btnPlayer2_1.getText());
         txt.setVisible(true);
-        removeLetter(txt.getText());
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
         pnlArr[i][j].setIs_used(true);
         pnlArr[i][j].setSameTurn(true);
@@ -830,14 +831,15 @@ public class Screen3 extends javax.swing.JFrame {
             addLetter(((JButton)btn).getText());
             ((JButton)btn).setText(randomLetter());
             removeLetter(((JButton)btn).getText());
-        }
+        } // adds and removes from letters array
         enablePlayer1();
         for (int i = 13; i <= 19; ++i)
         {
             Component pts = pnlPlayer2.getComponent(i);
             Component btn = pnlPlayer2.getComponent(i - 11);
             ((JLabel)pts).setText(getLetterPoints(((JButton)btn).getText()));
-        }
+        } // sets points for each letter
+        countLetters();
     }//GEN-LAST:event_btnNewLetters2ActionPerformed
 
     private void btnPlayer1_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer1_2ActionPerformed
@@ -850,7 +852,6 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
         txt.setText(btnPlayer1_2.getText());
         txt.setVisible(true);
-        removeLetter(txt.getText());
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
         pnlArr[i][j].setIs_used(true);
         pnlArr[i][j].setSameTurn(true);
@@ -870,7 +871,6 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
         txt.setText(btnPlayer1_3.getText());
         txt.setVisible(true);
-        removeLetter(txt.getText());
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
         pnlArr[i][j].setIs_used(true);
         pnlArr[i][j].setSameTurn(true);
@@ -890,7 +890,6 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
         txt.setText(btnPlayer1_4.getText());
         txt.setVisible(true);
-        removeLetter(txt.getText());
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
         pnlArr[i][j].setIs_used(true);
         pnlArr[i][j].setSameTurn(true);
@@ -910,7 +909,6 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
         txt.setText(btnPlayer1_5.getText());
         txt.setVisible(true);
-        removeLetter(txt.getText());
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
         pnlArr[i][j].setIs_used(true);
         pnlArr[i][j].setSameTurn(true);
@@ -930,7 +928,6 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
         txt.setText(btnPlayer1_6.getText());
         txt.setVisible(true);
-        removeLetter(txt.getText());
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
         pnlArr[i][j].setIs_used(true);
         pnlArr[i][j].setSameTurn(true);
@@ -950,7 +947,6 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
         txt.setText(btnPlayer1_7.getText());
         txt.setVisible(true);
-        removeLetter(txt.getText());
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
         pnlArr[i][j].setIs_used(true);
         pnlArr[i][j].setSameTurn(true);
@@ -970,7 +966,6 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
         txt.setText(btnPlayer2_2.getText());
         txt.setVisible(true);
-        removeLetter(txt.getText());
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
         pnlArr[i][j].setIs_used(true);
         pnlArr[i][j].setSameTurn(true);
@@ -990,7 +985,6 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
         txt.setText(btnPlayer2_3.getText());
         txt.setVisible(true);
-        removeLetter(txt.getText());
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
         pnlArr[i][j].setIs_used(true);
         pnlArr[i][j].setSameTurn(true);
@@ -1010,7 +1004,6 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
         txt.setText(btnPlayer2_4.getText());
         txt.setVisible(true);
-        removeLetter(txt.getText());
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
         pnlArr[i][j].setIs_used(true);
         pnlArr[i][j].setSameTurn(true);
@@ -1030,7 +1023,6 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
         txt.setText(btnPlayer2_5.getText());
         txt.setVisible(true);
-        removeLetter(txt.getText());
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
         pnlArr[i][j].setIs_used(true);
         pnlArr[i][j].setSameTurn(true);
@@ -1050,7 +1042,6 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
         txt.setText(btnPlayer2_6.getText());
         txt.setVisible(true);
-        removeLetter(txt.getText());
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
         pnlArr[i][j].setIs_used(true);
         pnlArr[i][j].setSameTurn(true);
@@ -1070,7 +1061,6 @@ public class Screen3 extends javax.swing.JFrame {
         txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
         txt.setText(btnPlayer2_7.getText());
         txt.setVisible(true);
-        removeLetter(txt.getText());
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
         pnlArr[i][j].setIs_used(true);
         pnlArr[i][j].setSameTurn(true);
@@ -1091,7 +1081,6 @@ public class Screen3 extends javax.swing.JFrame {
         Component c = pnlArr[i][j].getComponent(0);
         String letter = ((JLabel)c).getText();
         enablePlayer1Button(letter);
-        addLetter(letter);
         pnlArr[i][j].remove(c);
         pnlArr[i][j].repaint();
         for (int k = 2; k < 9; ++k)
@@ -1113,7 +1102,6 @@ public class Screen3 extends javax.swing.JFrame {
         Component c = pnlArr[i][j].getComponent(0);
         String letter = ((JLabel)c).getText();
         enablePlayer2Button(letter);
-        addLetter(letter);
         pnlArr[i][j].remove(c);
         pnlArr[i][j].repaint();
         for (int k = 2; k < 9; ++k)
@@ -1130,6 +1118,7 @@ public class Screen3 extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Непълен запис", "Грешка", JOptionPane.PLAIN_MESSAGE);
         }
         btnPlayer2_agree.setVisible(true);
+        countLetters();
     }//GEN-LAST:event_btnReady1ActionPerformed
 
     private void btnReady2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReady2ActionPerformed
@@ -1138,6 +1127,7 @@ public class Screen3 extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Непълен запис", "Грешка", JOptionPane.PLAIN_MESSAGE);
         }
         btnPlayer1_agree.setVisible(true);
+        countLetters();
     }//GEN-LAST:event_btnReady2ActionPerformed
 
     private void btnPlayer1_agreeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer1_agreeActionPerformed
@@ -1159,6 +1149,7 @@ public class Screen3 extends javax.swing.JFrame {
             if (!btn.isEnabled())
             {
                 ((JButton)btn).setText(randomLetter());
+                removeLetter(((JButton)btn).getText());
             }
         }
         for (int i = 13; i <= 19; ++i)
@@ -1189,6 +1180,7 @@ public class Screen3 extends javax.swing.JFrame {
             if (!btn.isEnabled())
             {
                 ((JButton)btn).setText(randomLetter());
+                removeLetter(((JButton)btn).getText());
             }
         }
         for (int i = 13; i <= 19; ++i)
@@ -1666,6 +1658,24 @@ public class Screen3 extends javax.swing.JFrame {
                 new Screen3().setVisible(true);
             }
         });
+    }
+    private void countLetters() throws java.lang.ArrayIndexOutOfBoundsException{
+        int[] count = new int[30];
+        for (int i =0; i < letters.length; i++) 
+        {
+            if (letters[i].length() == 0) continue;
+            try
+            {
+                count[((int)(letters[i]).charAt(0)) - 1040]++;
+            }
+            catch (java.lang.ArrayIndexOutOfBoundsException e)
+            {}
+        }
+        for (int i = 0; i < 27; ++i)
+        {
+            System.out.println((char)(1040 + i) + " " + count[i]);
+        }
+        System.out.println();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
