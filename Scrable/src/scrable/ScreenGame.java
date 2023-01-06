@@ -1277,9 +1277,11 @@ public class ScreenGame extends javax.swing.JFrame {
     
     private String randomLetter()
     {
+        int iterationNumber = 0;
         String answ;
         do
         {
+            if (iterationNumber++ > 10000) return "";
             answ =  letters[rand.nextInt(100)];
         }while(answ.equals(""));
         return answ;
