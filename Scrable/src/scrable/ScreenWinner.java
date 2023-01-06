@@ -32,6 +32,7 @@ public class ScreenWinner extends javax.swing.JFrame {
         lblWithPts = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Game Over");
 
         jPanel1.setBackground(new java.awt.Color(209, 188, 226));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
