@@ -9,7 +9,7 @@ import javax.swing.*;
 import java.util.*;
 import javax.swing.border.Border;
 
-public class Screen3 extends javax.swing.JFrame {
+public class ScreenGame extends javax.swing.JFrame {
     private MyJPanel [][]pnlArr = new MyJPanel[15][15];
     private int currI; // index i of where to write
     private int currJ; // index j of where to write
@@ -43,9 +43,8 @@ public class Screen3 extends javax.swing.JFrame {
     }
     
     
-    public Screen3() {
+    public ScreenGame() {
         initComponents();
-        countLetters();
         setExtendedState(MAXIMIZED_BOTH);
         arr();
         setTitle("Скрабъл");
@@ -57,8 +56,8 @@ public class Screen3 extends javax.swing.JFrame {
         setCurrI(7);
         setCurrJ(7);
         setIsPanelSelected(true);
-        lblName1.setText(Screen2_2.getTxtPlayer1Name().getText());
-        lblName2.setText(Screen2_2.getTxtPlayer2Name().getText());
+        lblName1.setText(ScreenInsertUsernames.getTxtPlayer1Name().getText());
+        lblName2.setText(ScreenInsertUsernames.getTxtPlayer2Name().getText());
         for (int i = 2; i < 9; ++i)
         {
             Component btn = pnlPlayer2.getComponent(i);
@@ -249,7 +248,6 @@ public class Screen3 extends javax.swing.JFrame {
             letPoints.setText(getLetterPoints(btnPlayer2_7.getText()));
             letPoints.setVisible(true);
         }
-        countLetters();
     }
  
     /**
@@ -296,7 +294,6 @@ public class Screen3 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(24, 77, 31));
-        setPreferredSize(new java.awt.Dimension(1200, 700));
 
         pnlFull.setBackground(new java.awt.Color(27, 77, 31));
         pnlFull.setPreferredSize(new java.awt.Dimension(700, 1200));
@@ -802,7 +799,6 @@ public class Screen3 extends javax.swing.JFrame {
             Component btn = pnlPlayer1.getComponent(i - 11);
             ((JLabel)pts).setText(getLetterPoints(((JButton)btn).getText()));
         } // sets points for each letter
-        countLetters();
     }//GEN-LAST:event_btnNewLetters1ActionPerformed
 
     private void btnPlayer2_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer2_1ActionPerformed
@@ -839,7 +835,6 @@ public class Screen3 extends javax.swing.JFrame {
             Component btn = pnlPlayer2.getComponent(i - 11);
             ((JLabel)pts).setText(getLetterPoints(((JButton)btn).getText()));
         } // sets points for each letter
-        countLetters();
     }//GEN-LAST:event_btnNewLetters2ActionPerformed
 
     private void btnPlayer1_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer1_2ActionPerformed
@@ -1118,7 +1113,6 @@ public class Screen3 extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Непълен запис", "Грешка", JOptionPane.PLAIN_MESSAGE);
         }
         btnPlayer2_agree.setVisible(true);
-        countLetters();
     }//GEN-LAST:event_btnReady1ActionPerformed
 
     private void btnReady2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReady2ActionPerformed
@@ -1127,7 +1121,6 @@ public class Screen3 extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Непълен запис", "Грешка", JOptionPane.PLAIN_MESSAGE);
         }
         btnPlayer1_agree.setVisible(true);
-        countLetters();
     }//GEN-LAST:event_btnReady2ActionPerformed
 
     private void btnPlayer1_agreeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer1_agreeActionPerformed
@@ -1194,18 +1187,18 @@ public class Screen3 extends javax.swing.JFrame {
 
     private void btnGiveUp1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGiveUp1ActionPerformed
         dispose();
-        new Screen4().setVisible(true);
+        new ScreenWinner().setVisible(true);
         System.out.println(lblName1.getText());
-        Screen4.lblWin.setText(lblName2.getText().toUpperCase() + " " + Screen4.lblWin.getText());
-        Screen4.lblWithPts.setText(Screen4.lblWithPts.getText() + " " + lblPoints2.getText() + " points");
+        ScreenWinner.lblWin.setText(lblName2.getText().toUpperCase() + " " + ScreenWinner.lblWin.getText());
+        ScreenWinner.lblWithPts.setText(ScreenWinner.lblWithPts.getText() + " " + lblPoints2.getText() + " points");
     }//GEN-LAST:event_btnGiveUp1ActionPerformed
 
     private void btnGiveUp2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGiveUp2ActionPerformed
         dispose();
-        new Screen4().setVisible(true);
+        new ScreenWinner().setVisible(true);
         System.out.println(lblName1.getText());
-        Screen4.lblWin.setText(lblName1.getText().toUpperCase() + " " + Screen4.lblWin.getText());
-        Screen4.lblWithPts.setText(Screen4.lblWithPts.getText() + " " + lblPoints1.getText() + " points");
+        ScreenWinner.lblWin.setText(lblName1.getText().toUpperCase() + " " + ScreenWinner.lblWin.getText());
+        ScreenWinner.lblWithPts.setText(ScreenWinner.lblWithPts.getText() + " " + lblPoints1.getText() + " points");
     }//GEN-LAST:event_btnGiveUp2ActionPerformed
 
     private String getLetterPoints(String letter)
@@ -1643,40 +1636,23 @@ public class Screen3 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Screen3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ScreenGame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Screen3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ScreenGame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Screen3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ScreenGame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Screen3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ScreenGame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Screen3().setVisible(true);
+                new ScreenGame().setVisible(true);
             }
         });
-    }
-    private void countLetters() throws java.lang.ArrayIndexOutOfBoundsException{
-        int[] count = new int[30];
-        for (int i =0; i < letters.length; i++) 
-        {
-            if (letters[i].length() == 0) continue;
-            try
-            {
-                count[((int)(letters[i]).charAt(0)) - 1040]++;
-            }
-            catch (java.lang.ArrayIndexOutOfBoundsException e)
-            {}
-        }
-        for (int i = 0; i < 27; ++i)
-        {
-            System.out.println((char)(1040 + i) + " " + count[i]);
-        }
-        System.out.println();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
