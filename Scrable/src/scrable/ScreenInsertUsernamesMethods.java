@@ -12,7 +12,7 @@ import java.io.PrintStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class Screen2 {
+public class ScreenInsertUsernamesMethods {
 
     private static File usernames;
     private static FileWriter name;

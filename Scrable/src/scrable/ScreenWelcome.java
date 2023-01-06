@@ -8,12 +8,12 @@ package scrable;
  *
  * @author dimanans
  */
-public class Screen_1 extends javax.swing.JFrame {
+public class ScreenWelcome extends javax.swing.JFrame {
 
     /**
      * Creates new form Screen_1
      */
-    public Screen_1() {
+    public ScreenWelcome() {
         initComponents();
         setTitle("Добре Дошли");
         setLocationRelativeTo(null);
@@ -129,7 +129,7 @@ public class Screen_1 extends javax.swing.JFrame {
 
     private void btn2PlayersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2PlayersActionPerformed
         this.dispose();
-        new Screen2_2().setVisible(true);
+        new ScreenInsertUsernames().setVisible(true);
     }//GEN-LAST:event_btn2PlayersActionPerformed
 
     
@@ -147,20 +147,21 @@ public class Screen_1 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Screen_1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ScreenWelcome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Screen_1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ScreenWelcome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Screen_1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ScreenWelcome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Screen_1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ScreenWelcome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Screen_1().setVisible(true);
+                new ScreenWelcome().setVisible(true);
             }
         });
     }

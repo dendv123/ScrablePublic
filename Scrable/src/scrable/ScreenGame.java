@@ -9,7 +9,7 @@ import javax.swing.*;
 import java.util.*;
 import javax.swing.border.Border;
 
-public class Screen3 extends javax.swing.JFrame {
+public class ScreenGame extends javax.swing.JFrame {
     private MyJPanel [][]pnlArr = new MyJPanel[15][15];
     private int currI; // index i of where to write
     private int currJ; // index j of where to write
@@ -42,21 +42,21 @@ public class Screen3 extends javax.swing.JFrame {
         return isPanelSelected;
     }
     
-    public Screen3() {
+    public ScreenGame() {
         initComponents();
-        setExtendedState(MAXIMIZED_BOTH);
+        setExtendedState(MAXIMIZED_BOTH); // sets the window to full screen
         arr();
         setTitle("Скрабъл");
-        setIsPanelSelected(false);
         enablePlayer1();
         btnPlayer1_agree.setVisible(false);
         btnPlayer2_agree.setVisible(false);
-        pnlArr[7][7].setBorder(BorderFactory.createLineBorder(Color.yellow));
-        setCurrI(7);
-        setCurrJ(7);
+        pnlArr[7][7].setBorder(BorderFactory.createLineBorder(Color.yellow)); // selects the middle panel
+        setCurrI(7); // selects the middle panel
+        setCurrJ(7); // selects the middle panel
         setIsPanelSelected(true);
-        lblName1.setText(Screen2_2.getTxtPlayer1Name().getText());
-        lblName2.setText(Screen2_2.getTxtPlayer2Name().getText());
+        lblName1.setText(ScreenInsertUsernames.getTxtPlayer1Name().getText()); //sets name text
+        lblName2.setText(ScreenInsertUsernames.getTxtPlayer2Name().getText()); //sets name text
+        
         for (int i = 2; i < 9; ++i)
         {
             Component btn = pnlPlayer2.getComponent(i);
@@ -65,191 +65,12 @@ public class Screen3 extends javax.swing.JFrame {
             btn = pnlPlayer1.getComponent(i);
             ((JButton)btn).setText(randomLetter());
             removeLetter(((JButton)btn).getText());
-        }
+        } // removes letters from the letters string and sets button text
         
-        
-        /// button 1 points label
-        {
-            int x = (int)btnPlayer1_1.getLocation().getX();
-            int y = (int)btnPlayer1_1.getLocation().getY();
-            JLabel letPoints = new JLabel();
-            pnlPlayer1.add(letPoints);
-            letPoints.setBounds(x + 30, y - 60, 100, 100);
-            Font f = new Font("Times New Roman", Font.BOLD, 12);
-            letPoints.setFont(f);
-            letPoints.setForeground(new Color(204, 204, 204));
-            letPoints.setText(getLetterPoints(btnPlayer1_1.getText()));
-            letPoints.setVisible(true);
-        }
-        /// button 2 points label
-        {
-            int x = (int)btnPlayer1_2.getLocation().getX();
-            int y = (int)btnPlayer1_2.getLocation().getY();
-            JLabel letPoints = new JLabel();
-            pnlPlayer1.add(letPoints);
-            letPoints.setBounds(x + 30, y - 60, 100, 100);
-            Font f = new Font("Times New Roman", Font.BOLD, 12);
-            letPoints.setFont(f);
-            letPoints.setForeground(new Color(204, 204, 204));
-            letPoints.setText(getLetterPoints(btnPlayer1_2.getText()));
-            letPoints.setVisible(true);
-        }
-        /// button 3 points label
-        {
-            int x = (int)btnPlayer1_3.getLocation().getX();
-            int y = (int)btnPlayer1_3.getLocation().getY();
-            JLabel letPoints = new JLabel();
-            pnlPlayer1.add(letPoints);
-            letPoints.setBounds(x + 30, y - 60, 100, 100);
-            Font f = new Font("Times New Roman", Font.BOLD, 12);
-            letPoints.setFont(f);
-            letPoints.setForeground(new Color(204, 204, 204));
-            letPoints.setText(getLetterPoints(btnPlayer1_3.getText()));
-            letPoints.setVisible(true);
-        }
-        /// button 4 points label
-        {
-            int x = (int)btnPlayer1_4.getLocation().getX();
-            int y = (int)btnPlayer1_4.getLocation().getY();
-            JLabel letPoints = new JLabel();
-            pnlPlayer1.add(letPoints);
-            letPoints.setBounds(x + 30, y - 60, 100, 100);
-            Font f = new Font("Times New Roman", Font.BOLD, 12);
-            letPoints.setFont(f);
-            letPoints.setForeground(new Color(204, 204, 204));
-            letPoints.setText(getLetterPoints(btnPlayer1_4.getText()));
-            letPoints.setVisible(true);
-        }
-        /// button 5 points label
-        {
-            int x = (int)btnPlayer1_5.getLocation().getX();
-            int y = (int)btnPlayer1_5.getLocation().getY();
-            JLabel letPoints = new JLabel();
-            pnlPlayer1.add(letPoints);
-            letPoints.setBounds(x + 30, y - 60, 100, 100);
-            Font f = new Font("Times New Roman", Font.BOLD, 12);
-            letPoints.setFont(f);
-            letPoints.setForeground(new Color(204, 204, 204));
-            letPoints.setText(getLetterPoints(btnPlayer1_5.getText()));
-            letPoints.setVisible(true);
-        }
-        /// button 6 points label
-        {
-            int x = (int)btnPlayer1_6.getLocation().getX();
-            int y = (int)btnPlayer1_6.getLocation().getY();
-            JLabel letPoints = new JLabel();
-            pnlPlayer1.add(letPoints);
-            letPoints.setBounds(x + 30, y - 60, 100, 100);
-            Font f = new Font("Times New Roman", Font.BOLD, 12);
-            letPoints.setFont(f);
-            letPoints.setForeground(new Color(204, 204, 204));
-            letPoints.setText(getLetterPoints(btnPlayer1_6.getText()));
-            letPoints.setVisible(true);
-        }
-        /// button 7 points label
-        {
-            int x = (int)btnPlayer1_7.getLocation().getX();
-            int y = (int)btnPlayer1_7.getLocation().getY();
-            JLabel letPoints = new JLabel();
-            pnlPlayer1.add(letPoints);
-            letPoints.setBounds(x + 30, y - 60, 100, 100);
-            Font f = new Font("Times New Roman", Font.BOLD, 12);
-            letPoints.setFont(f);
-            letPoints.setForeground(new Color(204, 204, 204));
-            letPoints.setText(getLetterPoints(btnPlayer1_7.getText()));
-            letPoints.setVisible(true);
-        }
-        /// button 2.1 points label
-        {
-            int x = (int)btnPlayer2_1.getLocation().getX();
-            int y = (int)btnPlayer2_1.getLocation().getY();
-            JLabel letPoints = new JLabel();
-            pnlPlayer2.add(letPoints);
-            letPoints.setBounds(x + 30, y - 60, 100, 100);
-            Font f = new Font("Times New Roman", Font.BOLD, 12);
-            letPoints.setFont(f);
-            letPoints.setForeground(new Color(204, 204, 204));
-            letPoints.setText(getLetterPoints(btnPlayer2_1.getText()));
-            letPoints.setVisible(true);
-        }
-        /// button 2.2 points label
-        {
-            int x = (int)btnPlayer2_2.getLocation().getX();
-            int y = (int)btnPlayer2_2.getLocation().getY();
-            JLabel letPoints = new JLabel();
-            pnlPlayer2.add(letPoints);
-            letPoints.setBounds(x + 30, y - 60, 100, 100);
-            Font f = new Font("Times New Roman", Font.BOLD, 12);
-            letPoints.setFont(f);
-            letPoints.setForeground(new Color(204, 204, 204));
-            letPoints.setText(getLetterPoints(btnPlayer2_2.getText()));
-            letPoints.setVisible(true);
-        }
-        /// button 2.3 points label
-        {
-            int x = (int)btnPlayer2_3.getLocation().getX();
-            int y = (int)btnPlayer2_3.getLocation().getY();
-            JLabel letPoints = new JLabel();
-            pnlPlayer2.add(letPoints);
-            letPoints.setBounds(x + 30, y - 60, 100, 100);
-            Font f = new Font("Times New Roman", Font.BOLD, 12);
-            letPoints.setFont(f);
-            letPoints.setForeground(new Color(204, 204, 204));
-            letPoints.setText(getLetterPoints(btnPlayer2_3.getText()));
-            letPoints.setVisible(true);
-        }
-        /// button 2.4 points label
-        {
-            int x = (int)btnPlayer2_4.getLocation().getX();
-            int y = (int)btnPlayer2_4.getLocation().getY();
-            JLabel letPoints = new JLabel();
-            pnlPlayer2.add(letPoints);
-            letPoints.setBounds(x + 30, y - 60, 100, 100);
-            Font f = new Font("Times New Roman", Font.BOLD, 12);
-            letPoints.setFont(f);
-            letPoints.setForeground(new Color(204, 204, 204));
-            letPoints.setText(getLetterPoints(btnPlayer2_4.getText()));
-            letPoints.setVisible(true);
-        }
-        /// button 2.5 points label
-        {
-            int x = (int)btnPlayer2_5.getLocation().getX();
-            int y = (int)btnPlayer2_5.getLocation().getY();
-            JLabel letPoints = new JLabel();
-            pnlPlayer2.add(letPoints);
-            letPoints.setBounds(x + 30, y - 60, 100, 100);
-            Font f = new Font("Times New Roman", Font.BOLD, 12);
-            letPoints.setFont(f);
-            letPoints.setForeground(new Color(204, 204, 204));
-            letPoints.setText(getLetterPoints(btnPlayer2_5.getText()));
-            letPoints.setVisible(true);
-        }
-        /// button 2.6 points label
-        {
-            int x = (int)btnPlayer2_6.getLocation().getX();
-            int y = (int)btnPlayer2_6.getLocation().getY();
-            JLabel letPoints = new JLabel();
-            pnlPlayer2.add(letPoints);
-            letPoints.setBounds(x + 30, y - 60, 100, 100);
-            Font f = new Font("Times New Roman", Font.BOLD, 12);
-            letPoints.setFont(f);
-            letPoints.setForeground(new Color(204, 204, 204));
-            letPoints.setText(getLetterPoints(btnPlayer2_6.getText()));
-            letPoints.setVisible(true);
-        }
-        /// button 2.7 points label
-        {
-            int x = (int)btnPlayer2_7.getLocation().getX();
-            int y = (int)btnPlayer2_7.getLocation().getY();
-            JLabel letPoints = new JLabel();
-            pnlPlayer2.add(letPoints);
-            letPoints.setBounds(x + 30, y - 60, 100, 100);
-            Font f = new Font("Times New Roman", Font.BOLD, 12);
-            letPoints.setFont(f);
-            letPoints.setForeground(new Color(204, 204, 204));
-            letPoints.setText(getLetterPoints(btnPlayer2_7.getText()));
-            letPoints.setVisible(true);
-        }
+        for (int i = 2; i < 9; ++i){
+            initBtnLblsPlayer1(i);
+            initBtnLblsPlayer2(i);
+        } // initializing letter point labels
     }
     
     /**
@@ -296,7 +117,6 @@ public class Screen3 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(24, 77, 31));
-        setPreferredSize(new java.awt.Dimension(1200, 700));
 
         pnlFull.setBackground(new java.awt.Color(27, 77, 31));
         pnlFull.setPreferredSize(new java.awt.Dimension(700, 1200));
@@ -703,7 +523,7 @@ public class Screen3 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    public void arr(){
+    private void arr(){
         for(int i=0; i<15; i++){
             for(int j=0; j<15; j++){
                 pnlArr[i][j] = new MyJPanel();
@@ -764,11 +584,36 @@ public class Screen3 extends javax.swing.JFrame {
         }
     }
     
-    private void btnLegendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLegendActionPerformed
-        new ScreenLegend().setVisible(true);
-    }//GEN-LAST:event_btnLegendActionPerformed
-
-    private void btnPlayer1_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer1_1ActionPerformed
+    private void initBtnLblsPlayer1 (int ind){
+        Component c = pnlPlayer1.getComponent(ind);
+        int x = (int)((JButton) c).getLocation().getX();
+        int y = (int)((JButton) c).getLocation().getY();
+        JLabel letPoints = new JLabel();
+        pnlPlayer1.add(letPoints);
+        letPoints.setBounds(x + 30, y - 60, 100, 100);
+        Font f = new Font("Times New Roman", Font.BOLD, 12);
+        letPoints.setFont(f);
+        letPoints.setForeground(new Color(204, 204, 204));
+        letPoints.setText(getLetterPoints(((JButton) c).getText()));
+        letPoints.setVisible(true);
+    }
+    
+    private void initBtnLblsPlayer2 (int ind){
+        Component c = pnlPlayer2.getComponent(ind);
+        int x = (int)((JButton) c).getLocation().getX();
+        int y = (int)((JButton) c).getLocation().getY();
+        JLabel letPoints = new JLabel();
+        pnlPlayer2.add(letPoints);
+        letPoints.setBounds(x + 30, y - 60, 100, 100);
+        Font f = new Font("Times New Roman", Font.BOLD, 12);
+        letPoints.setFont(f);
+        letPoints.setForeground(new Color(204, 204, 204));
+        letPoints.setText(getLetterPoints(((JButton) c).getText()));
+        letPoints.setVisible(true);
+    }
+    
+    private void btnClickerPlayer1 (int ind){
+        Component c = pnlPlayer1.getComponent(ind);
         int i = getCurrI();
         int j = getCurrJ();
         if (pnlArr[i][j].getComponentCount() != 0) return;
@@ -776,16 +621,43 @@ public class Screen3 extends javax.swing.JFrame {
         JLabel txt = new JLabel();
         pnlArr[i][j].add(txt);
         txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
-        txt.setText(btnPlayer1_1.getText());
+        txt.setText(((JButton) c).getText());
         txt.setVisible(true);
-        removeLetter(txt.getText());
         pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
         pnlArr[i][j].setIs_used(true);
         pnlArr[i][j].setSameTurn(true);
         setIsPanelSelected(false);
-        btnPlayer1_1.setEnabled(false);
+        ((JButton) c).setEnabled(false);
         btnNewLetters1.setEnabled(false);
         btnNewLetters2.setEnabled(false);
+    }
+    
+    private void btnClickerPlayer2 (int ind){
+        Component c = pnlPlayer2.getComponent(ind);
+        int i = getCurrI();
+        int j = getCurrJ();
+        if (pnlArr[i][j].getComponentCount() != 0) return;
+        if (!getIsPanelSelected()) return;
+        JLabel txt = new JLabel();
+        pnlArr[i][j].add(txt);
+        txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
+        txt.setText(((JButton) c).getText());
+        txt.setVisible(true);
+        pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
+        pnlArr[i][j].setIs_used(true);
+        pnlArr[i][j].setSameTurn(true);
+        setIsPanelSelected(false);
+        ((JButton) c).setEnabled(false);
+        btnNewLetters1.setEnabled(false);
+        btnNewLetters2.setEnabled(false);
+    }
+    
+    private void btnLegendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLegendActionPerformed
+        new ScreenLegend().setVisible(true);
+    }//GEN-LAST:event_btnLegendActionPerformed
+
+    private void btnPlayer1_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer1_1ActionPerformed
+        btnClickerPlayer1(2);
     }//GEN-LAST:event_btnPlayer1_1ActionPerformed
 
     private void btnNewLetters1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewLetters1ActionPerformed
@@ -806,23 +678,7 @@ public class Screen3 extends javax.swing.JFrame {
     }//GEN-LAST:event_btnNewLetters1ActionPerformed
 
     private void btnPlayer2_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer2_1ActionPerformed
-        int i = getCurrI();
-        int j = getCurrJ();
-        if (!getIsPanelSelected()) return;
-        if (pnlArr[i][j].getComponentCount() != 0) return;
-        JLabel txt = new JLabel();
-        pnlArr[i][j].add(txt);
-        txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
-        txt.setText(btnPlayer2_1.getText());
-        txt.setVisible(true);
-        removeLetter(txt.getText());
-        pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
-        pnlArr[i][j].setIs_used(true);
-        pnlArr[i][j].setSameTurn(true);
-        setIsPanelSelected(false);
-        btnPlayer2_1.setEnabled(false);
-        btnNewLetters1.setEnabled(false);
-        btnNewLetters2.setEnabled(false);
+        btnClickerPlayer2(2);
     }//GEN-LAST:event_btnPlayer2_1ActionPerformed
 
     private void btnNewLetters2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewLetters2ActionPerformed
@@ -843,243 +699,51 @@ public class Screen3 extends javax.swing.JFrame {
     }//GEN-LAST:event_btnNewLetters2ActionPerformed
 
     private void btnPlayer1_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer1_2ActionPerformed
-        int i = getCurrI();
-        int j = getCurrJ();
-        if (!getIsPanelSelected()) return;
-        if (pnlArr[i][j].getComponentCount() != 0) return;
-        JLabel txt = new JLabel();
-        pnlArr[i][j].add(txt);
-        txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
-        txt.setText(btnPlayer1_2.getText());
-        txt.setVisible(true);
-        removeLetter(txt.getText());
-        pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
-        pnlArr[i][j].setIs_used(true);
-        pnlArr[i][j].setSameTurn(true);
-        setIsPanelSelected(false);
-        btnPlayer1_2.setEnabled(false);
-        btnNewLetters1.setEnabled(false);
-        btnNewLetters2.setEnabled(false);
+        btnClickerPlayer1(3);
     }//GEN-LAST:event_btnPlayer1_2ActionPerformed
 
     private void btnPlayer1_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer1_3ActionPerformed
-        int i = getCurrI();
-        int j = getCurrJ();
-        if (!getIsPanelSelected()) return;
-        if (pnlArr[i][j].getComponentCount() != 0) return;
-        JLabel txt = new JLabel();
-        pnlArr[i][j].add(txt);
-        txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
-        txt.setText(btnPlayer1_3.getText());
-        txt.setVisible(true);
-        removeLetter(txt.getText());
-        pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
-        pnlArr[i][j].setIs_used(true);
-        pnlArr[i][j].setSameTurn(true);
-        setIsPanelSelected(false);
-        btnPlayer1_3.setEnabled(false);
-        btnNewLetters1.setEnabled(false);
-        btnNewLetters2.setEnabled(false);
+        btnClickerPlayer1(4);
     }//GEN-LAST:event_btnPlayer1_3ActionPerformed
 
     private void btnPlayer1_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer1_4ActionPerformed
-        int i = getCurrI();
-        int j = getCurrJ();
-        if (!getIsPanelSelected()) return;
-        if (pnlArr[i][j].getComponentCount() != 0) return;
-        JLabel txt = new JLabel();
-        pnlArr[i][j].add(txt);
-        txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
-        txt.setText(btnPlayer1_4.getText());
-        txt.setVisible(true);
-        removeLetter(txt.getText());
-        pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
-        pnlArr[i][j].setIs_used(true);
-        pnlArr[i][j].setSameTurn(true);
-        setIsPanelSelected(false);
-        btnPlayer1_4.setEnabled(false);
-        btnNewLetters1.setEnabled(false);
-        btnNewLetters2.setEnabled(false);
+        btnClickerPlayer1(5);
     }//GEN-LAST:event_btnPlayer1_4ActionPerformed
 
     private void btnPlayer1_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer1_5ActionPerformed
-        int i = getCurrI();
-        int j = getCurrJ();
-        if (!getIsPanelSelected()) return;
-        if (pnlArr[i][j].getComponentCount() != 0) return;
-        JLabel txt = new JLabel();
-        pnlArr[i][j].add(txt);
-        txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
-        txt.setText(btnPlayer1_5.getText());
-        txt.setVisible(true);
-        removeLetter(txt.getText());
-        pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
-        pnlArr[i][j].setIs_used(true);
-        pnlArr[i][j].setSameTurn(true);
-        setIsPanelSelected(false);
-        btnPlayer1_5.setEnabled(false);
-        btnNewLetters1.setEnabled(false);
-        btnNewLetters2.setEnabled(false);
+        btnClickerPlayer1(6);
     }//GEN-LAST:event_btnPlayer1_5ActionPerformed
 
     private void btnPlayer1_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer1_6ActionPerformed
-        int i = getCurrI();
-        int j = getCurrJ();
-        if (!getIsPanelSelected()) return;
-        if (pnlArr[i][j].getComponentCount() != 0) return;
-        JLabel txt = new JLabel();
-        pnlArr[i][j].add(txt);
-        txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
-        txt.setText(btnPlayer1_6.getText());
-        txt.setVisible(true);
-        removeLetter(txt.getText());
-        pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
-        pnlArr[i][j].setIs_used(true);
-        pnlArr[i][j].setSameTurn(true);
-        setIsPanelSelected(false);
-        btnPlayer1_6.setEnabled(false);
-        btnNewLetters1.setEnabled(false);
-        btnNewLetters2.setEnabled(false);
+        btnClickerPlayer1(7);
     }//GEN-LAST:event_btnPlayer1_6ActionPerformed
 
     private void btnPlayer1_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer1_7ActionPerformed
-        int i = getCurrI();
-        int j = getCurrJ();
-        if (!getIsPanelSelected()) return;
-        if (pnlArr[i][j].getComponentCount() != 0) return;
-        JLabel txt = new JLabel();
-        pnlArr[i][j].add(txt);
-        txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
-        txt.setText(btnPlayer1_7.getText());
-        txt.setVisible(true);
-        removeLetter(txt.getText());
-        pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
-        pnlArr[i][j].setIs_used(true);
-        pnlArr[i][j].setSameTurn(true);
-        setIsPanelSelected(false);
-        btnPlayer1_7.setEnabled(false);
-        btnNewLetters1.setEnabled(false);
-        btnNewLetters2.setEnabled(false);
+        btnClickerPlayer1(8);
     }//GEN-LAST:event_btnPlayer1_7ActionPerformed
 
     private void btnPlayer2_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer2_2ActionPerformed
-        int i = getCurrI();
-        int j = getCurrJ();
-        if (!getIsPanelSelected()) return;
-        if (pnlArr[i][j].getComponentCount() != 0) return;
-        JLabel txt = new JLabel();
-        pnlArr[i][j].add(txt);
-        txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
-        txt.setText(btnPlayer2_2.getText());
-        txt.setVisible(true);
-        removeLetter(txt.getText());
-        pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
-        pnlArr[i][j].setIs_used(true);
-        pnlArr[i][j].setSameTurn(true);
-        setIsPanelSelected(false);
-        btnPlayer2_2.setEnabled(false);
-        btnNewLetters1.setEnabled(false);
-        btnNewLetters2.setEnabled(false);
+        btnClickerPlayer2(3);
     }//GEN-LAST:event_btnPlayer2_2ActionPerformed
 
     private void btnPlayer2_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer2_3ActionPerformed
-        int i = getCurrI();
-        int j = getCurrJ();
-        if (!getIsPanelSelected()) return;
-        if (pnlArr[i][j].getComponentCount() != 0) return;
-        JLabel txt = new JLabel();
-        pnlArr[i][j].add(txt);
-        txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
-        txt.setText(btnPlayer2_3.getText());
-        txt.setVisible(true);
-        removeLetter(txt.getText());
-        pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
-        pnlArr[i][j].setIs_used(true);
-        pnlArr[i][j].setSameTurn(true);
-        setIsPanelSelected(false);
-        btnPlayer2_3.setEnabled(false);
-        btnNewLetters1.setEnabled(false);
-        btnNewLetters2.setEnabled(false);
+        btnClickerPlayer2(4);
     }//GEN-LAST:event_btnPlayer2_3ActionPerformed
 
     private void btnPlayer2_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer2_4ActionPerformed
-        int i = getCurrI();
-        int j = getCurrJ();
-        if (!getIsPanelSelected()) return;
-        if (pnlArr[i][j].getComponentCount() != 0) return;
-        JLabel txt = new JLabel();
-        pnlArr[i][j].add(txt);
-        txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
-        txt.setText(btnPlayer2_4.getText());
-        txt.setVisible(true);
-        removeLetter(txt.getText());
-        pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
-        pnlArr[i][j].setIs_used(true);
-        pnlArr[i][j].setSameTurn(true);
-        setIsPanelSelected(false);
-        btnPlayer2_4.setEnabled(false);
-        btnNewLetters1.setEnabled(false);
-        btnNewLetters2.setEnabled(false);
+        btnClickerPlayer2(5);
     }//GEN-LAST:event_btnPlayer2_4ActionPerformed
 
     private void btnPlayer2_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer2_5ActionPerformed
-        int i = getCurrI();
-        int j = getCurrJ();
-        if (!getIsPanelSelected()) return;
-        if (pnlArr[i][j].getComponentCount() != 0) return;
-        JLabel txt = new JLabel();
-        pnlArr[i][j].add(txt);
-        txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
-        txt.setText(btnPlayer2_5.getText());
-        txt.setVisible(true);
-        removeLetter(txt.getText());
-        pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
-        pnlArr[i][j].setIs_used(true);
-        pnlArr[i][j].setSameTurn(true);
-        setIsPanelSelected(false);
-        btnPlayer2_5.setEnabled(false);
-        btnNewLetters1.setEnabled(false);
-        btnNewLetters2.setEnabled(false);
+        btnClickerPlayer2(6);
     }//GEN-LAST:event_btnPlayer2_5ActionPerformed
 
     private void btnPlayer2_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer2_6ActionPerformed
-        int i = getCurrI();
-        int j = getCurrJ();
-        if (!getIsPanelSelected()) return;
-        if (pnlArr[i][j].getComponentCount() != 0) return;
-        JLabel txt = new JLabel();
-        pnlArr[i][j].add(txt);
-        txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
-        txt.setText(btnPlayer2_6.getText());
-        txt.setVisible(true);
-        removeLetter(txt.getText());
-        pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
-        pnlArr[i][j].setIs_used(true);
-        pnlArr[i][j].setSameTurn(true);
-        setIsPanelSelected(false);
-        btnPlayer2_6.setEnabled(false);
-        btnNewLetters1.setEnabled(false);
-        btnNewLetters2.setEnabled(false);
+        btnClickerPlayer2(7);
     }//GEN-LAST:event_btnPlayer2_6ActionPerformed
 
     private void btnPlayer2_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer2_7ActionPerformed
-        int i = getCurrI();
-        int j = getCurrJ();
-        if (!getIsPanelSelected()) return;
-        if (pnlArr[i][j].getComponentCount() != 0) return;
-        JLabel txt = new JLabel();
-        pnlArr[i][j].add(txt);
-        txt.setFont(new Font("Times New Roman", Font.BOLD, 30));
-        txt.setText(btnPlayer2_7.getText());
-        txt.setVisible(true);
-        removeLetter(txt.getText());
-        pnlArr[i][j].setBorder(BorderFactory.createEmptyBorder());
-        pnlArr[i][j].setIs_used(true);
-        pnlArr[i][j].setSameTurn(true);
-        setIsPanelSelected(false);
-        btnPlayer2_7.setEnabled(false);
-        btnNewLetters1.setEnabled(false);
-        btnNewLetters2.setEnabled(false);
+        btnClickerPlayer2(8);
     }//GEN-LAST:event_btnPlayer2_7ActionPerformed
 
     private void btnBack1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBack1ActionPerformed
@@ -1161,6 +825,7 @@ public class Screen3 extends javax.swing.JFrame {
             if (!btn.isEnabled())
             {
                 ((JButton)btn).setText(randomLetter());
+                addLetter(((JButton)btn).getText());
             }
         }
         for (int i = 13; i <= 19; ++i)
@@ -1191,6 +856,7 @@ public class Screen3 extends javax.swing.JFrame {
             if (!btn.isEnabled())
             {
                 ((JButton)btn).setText(randomLetter());
+                addLetter(((JButton)btn).getText());
             }
         }
         for (int i = 13; i <= 19; ++i)
@@ -1204,18 +870,18 @@ public class Screen3 extends javax.swing.JFrame {
 
     private void btnGiveUp1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGiveUp1ActionPerformed
         dispose();
-        new Screen4().setVisible(true);
+        new ScreenWinner().setVisible(true);
         System.out.println(lblName1.getText());
-        Screen4.lblWin.setText(lblName2.getText().toUpperCase() + " " + Screen4.lblWin.getText());
-        Screen4.lblWithPts.setText(Screen4.lblWithPts.getText() + " " + lblPoints2.getText() + " points");
+        ScreenWinner.lblWin.setText(lblName2.getText().toUpperCase() + " " + ScreenWinner.lblWin.getText());
+        ScreenWinner.lblWithPts.setText(ScreenWinner.lblWithPts.getText() + " " + lblPoints2.getText() + " points");
     }//GEN-LAST:event_btnGiveUp1ActionPerformed
 
     private void btnGiveUp2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGiveUp2ActionPerformed
         dispose();
-        new Screen4().setVisible(true);
+        new ScreenWinner().setVisible(true);
         System.out.println(lblName1.getText());
-        Screen4.lblWin.setText(lblName1.getText().toUpperCase() + " " + Screen4.lblWin.getText());
-        Screen4.lblWithPts.setText(Screen4.lblWithPts.getText() + " " + lblPoints1.getText() + " points");
+        ScreenWinner.lblWin.setText(lblName1.getText().toUpperCase() + " " + ScreenWinner.lblWin.getText());
+        ScreenWinner.lblWithPts.setText(ScreenWinner.lblWithPts.getText() + " " + lblPoints1.getText() + " points");
     }//GEN-LAST:event_btnGiveUp2ActionPerformed
 
     private String getLetterPoints(String letter)
@@ -1635,6 +1301,7 @@ public class Screen3 extends javax.swing.JFrame {
            if(letters[j].equals(""))
            {
                letters[j] = letter;
+               return;
            }
         }   
     }
@@ -1652,20 +1319,21 @@ public class Screen3 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Screen3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ScreenGame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Screen3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ScreenGame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Screen3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ScreenGame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Screen3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ScreenGame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Screen3().setVisible(true);
+                new ScreenGame().setVisible(true);
             }
         });
     }

@@ -2,7 +2,7 @@ package scrable;
 
 import javax.swing.JTextField;
 
-public class Screen2_2 extends javax.swing.JFrame {
+public class ScreenInsertUsernames extends javax.swing.JFrame {
 
     
     public static JTextField getTxtPlayer1Name() {
@@ -15,7 +15,7 @@ public class Screen2_2 extends javax.swing.JFrame {
     /**
      * Creates new form Screen_2
      */
-    public Screen2_2() {
+    public ScreenInsertUsernames() {
         initComponents();
         lblWarning1.setVisible(false);
         lblWarning2.setVisible(false);
@@ -241,7 +241,7 @@ public class Screen2_2 extends javax.swing.JFrame {
     }//GEN-LAST:event_txtPlayer2NameActionPerformed
 
     private void btnOk1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOk1ActionPerformed
-        if (!Screen2.setUsername(txtPlayer1Name.getText()))
+        if (!ScreenInsertUsernamesMethods.setUsername(txtPlayer1Name.getText()))
         {
             lblWarning1.setVisible(true);
         }
@@ -258,7 +258,7 @@ public class Screen2_2 extends javax.swing.JFrame {
     }//GEN-LAST:event_btnOk1ActionPerformed
 
     private void btnOk2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOk2ActionPerformed
-        if (!Screen2.setUsername(txtPlayer2Name.getText()))
+        if (!ScreenInsertUsernamesMethods.setUsername(txtPlayer2Name.getText()))
         {
             lblWarning2.setVisible(true);
         }
@@ -276,9 +276,9 @@ public class Screen2_2 extends javax.swing.JFrame {
 
     private void btnContinueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContinueActionPerformed
         dispose();
-        Screen2 OBJ=new Screen2();
+        ScreenInsertUsernamesMethods OBJ=new ScreenInsertUsernamesMethods();
         OBJ.importUsername(txtPlayer1Name.getText() + "\n" + txtPlayer2Name.getText() + "\n");
-        new Screen3().setVisible(true);
+        new ScreenGame().setVisible(true);
     }//GEN-LAST:event_btnContinueActionPerformed
 
     private void txtPlayer1NameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPlayer1NameActionPerformed
@@ -302,21 +302,23 @@ public class Screen2_2 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Screen2_2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ScreenInsertUsernames.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Screen2_2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ScreenInsertUsernames.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Screen2_2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ScreenInsertUsernames.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Screen2_2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ScreenInsertUsernames.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Screen2_2().setVisible(true);
+                new ScreenInsertUsernames().setVisible(true);
             }
         });
     }

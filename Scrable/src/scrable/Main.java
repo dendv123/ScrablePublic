@@ -8,7 +8,7 @@ package scrable;
  *
  * @author user
  */
-public class Main extends Screen_1 {
+public class Main extends ScreenWelcome {
     public static void main(String[] args) {
         Run();
     }
