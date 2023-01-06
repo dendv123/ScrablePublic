@@ -1625,6 +1625,7 @@ public class Screen3 extends javax.swing.JFrame {
            if(letters[j].equals(""))
            {
                letters[j] = letter;
+               return;
            }
         }   
     }
