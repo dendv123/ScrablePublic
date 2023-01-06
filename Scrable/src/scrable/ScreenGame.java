@@ -45,7 +45,7 @@ public class ScreenGame extends javax.swing.JFrame {
     public ScreenGame() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH); // sets the window to full screen
-        arr();
+        initArr();
         setTitle("Скрабъл");
         enablePlayer1();
         btnPlayer1_agree.setVisible(false);
@@ -56,7 +56,7 @@ public class ScreenGame extends javax.swing.JFrame {
         setIsPanelSelected(true);
         lblName1.setText(ScreenInsertUsernames.getTxtPlayer1Name().getText()); //sets name text
         lblName2.setText(ScreenInsertUsernames.getTxtPlayer2Name().getText()); //sets name text
-        
+
         for (int i = 2; i < 9; ++i)
         {
             Component btn = pnlPlayer2.getComponent(i);
@@ -523,7 +523,7 @@ public class ScreenGame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void arr(){
+    private void initArr(){
         for(int i=0; i<15; i++){
             for(int j=0; j<15; j++){
                 pnlArr[i][j] = new MyJPanel();
@@ -667,14 +667,14 @@ public class ScreenGame extends javax.swing.JFrame {
             addLetter(((JButton)btn).getText());
             ((JButton)btn).setText(randomLetter());
             removeLetter(((JButton)btn).getText());
-        }
+        } // adds and removes from letters array
         enablePlayer2();
         for (int i = 13; i <= 19; ++i)
         {
             Component pts = pnlPlayer1.getComponent(i);
             Component btn = pnlPlayer1.getComponent(i - 11);
             ((JLabel)pts).setText(getLetterPoints(((JButton)btn).getText()));
-        }
+        } // sets points for each letter
     }//GEN-LAST:event_btnNewLetters1ActionPerformed
 
     private void btnPlayer2_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer2_1ActionPerformed
@@ -688,63 +688,63 @@ public class ScreenGame extends javax.swing.JFrame {
             addLetter(((JButton)btn).getText());
             ((JButton)btn).setText(randomLetter());
             removeLetter(((JButton)btn).getText());
-        }
+        } // adds and removes from letters array
         enablePlayer1();
         for (int i = 13; i <= 19; ++i)
         {
             Component pts = pnlPlayer2.getComponent(i);
             Component btn = pnlPlayer2.getComponent(i - 11);
             ((JLabel)pts).setText(getLetterPoints(((JButton)btn).getText()));
-        }
+        } // sets points for each letter
     }//GEN-LAST:event_btnNewLetters2ActionPerformed
 
     private void btnPlayer1_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer1_2ActionPerformed
         btnClickerPlayer1(3);
     }//GEN-LAST:event_btnPlayer1_2ActionPerformed
 
-    private void btnPlayer1_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer1_3ActionPerformed
+    private void btnPlayer1_3ActionPerformed(java.awt.event.ActionEvent evt) {                                             
         btnClickerPlayer1(4);
-    }//GEN-LAST:event_btnPlayer1_3ActionPerformed
+    }                                            
 
-    private void btnPlayer1_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer1_4ActionPerformed
+    private void btnPlayer1_4ActionPerformed(java.awt.event.ActionEvent evt) {                                             
         btnClickerPlayer1(5);
-    }//GEN-LAST:event_btnPlayer1_4ActionPerformed
+    }                                            
 
-    private void btnPlayer1_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer1_5ActionPerformed
+    private void btnPlayer1_5ActionPerformed(java.awt.event.ActionEvent evt) {                                             
         btnClickerPlayer1(6);
-    }//GEN-LAST:event_btnPlayer1_5ActionPerformed
+    }                                            
 
-    private void btnPlayer1_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer1_6ActionPerformed
+    private void btnPlayer1_6ActionPerformed(java.awt.event.ActionEvent evt) {                                             
         btnClickerPlayer1(7);
-    }//GEN-LAST:event_btnPlayer1_6ActionPerformed
+    }                                            
 
-    private void btnPlayer1_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer1_7ActionPerformed
+    private void btnPlayer1_7ActionPerformed(java.awt.event.ActionEvent evt) {                                             
         btnClickerPlayer1(8);
-    }//GEN-LAST:event_btnPlayer1_7ActionPerformed
+    }                                            
 
-    private void btnPlayer2_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer2_2ActionPerformed
+    private void btnPlayer2_2ActionPerformed(java.awt.event.ActionEvent evt) {                                             
         btnClickerPlayer2(3);
-    }//GEN-LAST:event_btnPlayer2_2ActionPerformed
+    }                                            
 
-    private void btnPlayer2_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer2_3ActionPerformed
+    private void btnPlayer2_3ActionPerformed(java.awt.event.ActionEvent evt) {                                             
         btnClickerPlayer2(4);
-    }//GEN-LAST:event_btnPlayer2_3ActionPerformed
+    }                                            
 
-    private void btnPlayer2_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer2_4ActionPerformed
+    private void btnPlayer2_4ActionPerformed(java.awt.event.ActionEvent evt) {                                             
         btnClickerPlayer2(5);
-    }//GEN-LAST:event_btnPlayer2_4ActionPerformed
+    }                                            
 
-    private void btnPlayer2_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer2_5ActionPerformed
+    private void btnPlayer2_5ActionPerformed(java.awt.event.ActionEvent evt) {                                             
         btnClickerPlayer2(6);
-    }//GEN-LAST:event_btnPlayer2_5ActionPerformed
+    }                                            
 
-    private void btnPlayer2_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer2_6ActionPerformed
+    private void btnPlayer2_6ActionPerformed(java.awt.event.ActionEvent evt) {                                             
         btnClickerPlayer2(7);
-    }//GEN-LAST:event_btnPlayer2_6ActionPerformed
+    }                                            
 
-    private void btnPlayer2_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayer2_7ActionPerformed
+    private void btnPlayer2_7ActionPerformed(java.awt.event.ActionEvent evt) {                                             
         btnClickerPlayer2(8);
-    }//GEN-LAST:event_btnPlayer2_7ActionPerformed
+    }                                            
 
     private void btnBack1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBack1ActionPerformed
         if (!getIsPanelSelected()) return;
@@ -757,7 +757,6 @@ public class ScreenGame extends javax.swing.JFrame {
         Component c = pnlArr[i][j].getComponent(0);
         String letter = ((JLabel)c).getText();
         enablePlayer1Button(letter);
-        addLetter(letter);
         pnlArr[i][j].remove(c);
         pnlArr[i][j].repaint();
         for (int k = 2; k < 9; ++k)
@@ -779,7 +778,6 @@ public class ScreenGame extends javax.swing.JFrame {
         Component c = pnlArr[i][j].getComponent(0);
         String letter = ((JLabel)c).getText();
         enablePlayer2Button(letter);
-        addLetter(letter);
         pnlArr[i][j].remove(c);
         pnlArr[i][j].repaint();
         for (int k = 2; k < 9; ++k)
@@ -793,7 +791,9 @@ public class ScreenGame extends javax.swing.JFrame {
     private void btnReady1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReady1ActionPerformed
         if (pnlArr[getCurrI()][getCurrJ()].getComponentCount() == 0) 
         {
-            JOptionPane.showMessageDialog(null, "Непълен запис", "Грешка", JOptionPane.PLAIN_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Непълен запис\nЗабележка: "
+                    + "Кликнете върху последната написана буква (в дъската)", 
+                    "Грешка", JOptionPane.PLAIN_MESSAGE);
         }
         btnPlayer2_agree.setVisible(true);
     }//GEN-LAST:event_btnReady1ActionPerformed
@@ -801,7 +801,9 @@ public class ScreenGame extends javax.swing.JFrame {
     private void btnReady2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReady2ActionPerformed
         if (pnlArr[getCurrI()][getCurrJ()].getComponentCount() == 0) 
         {
-            JOptionPane.showMessageDialog(null, "Непълен запис", "Грешка", JOptionPane.PLAIN_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Непълен запис\nЗабележка: "
+                    + "Кликнете върху последната написана буква (в дъската)", 
+                    "Грешка", JOptionPane.PLAIN_MESSAGE);
         }
         btnPlayer1_agree.setVisible(true);
     }//GEN-LAST:event_btnReady2ActionPerformed
@@ -825,7 +827,7 @@ public class ScreenGame extends javax.swing.JFrame {
             if (!btn.isEnabled())
             {
                 ((JButton)btn).setText(randomLetter());
-                addLetter(((JButton)btn).getText());
+                removeLetter(((JButton)btn).getText());
             }
         }
         for (int i = 13; i <= 19; ++i)
@@ -856,7 +858,7 @@ public class ScreenGame extends javax.swing.JFrame {
             if (!btn.isEnabled())
             {
                 ((JButton)btn).setText(randomLetter());
-                addLetter(((JButton)btn).getText());
+                removeLetter(((JButton)btn).getText());
             }
         }
         for (int i = 13; i <= 19; ++i)
