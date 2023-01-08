@@ -39,11 +39,11 @@ public class ScreenWinner extends javax.swing.JFrame {
 
         lblWin.setFont(new java.awt.Font("Times New Roman", 1, 60)); // NOI18N
         lblWin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblWin.setText("WINS!!!");
+        lblWin.setText("печели!!!");
 
         lblWithPts.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         lblWithPts.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblWithPts.setText("with");
+        lblWithPts.setText("с");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

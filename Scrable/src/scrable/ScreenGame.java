@@ -114,6 +114,7 @@ public class ScreenGame extends javax.swing.JFrame {
         btnPlayer2_agree = new javax.swing.JButton();
         btnGiveUp1 = new javax.swing.JButton();
         btnGiveUp2 = new javax.swing.JButton();
+        btnGameOver = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(24, 77, 31));
@@ -472,6 +473,15 @@ public class ScreenGame extends javax.swing.JFrame {
             }
         });
 
+        btnGameOver.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        btnGameOver.setText("Край на играта");
+        btnGameOver.setPreferredSize(new java.awt.Dimension(169, 37));
+        btnGameOver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGameOverActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout pnlFullLayout = new javax.swing.GroupLayout(pnlFull);
         pnlFull.setLayout(pnlFullLayout);
         pnlFullLayout.setHorizontalGroup(
@@ -483,16 +493,20 @@ public class ScreenGame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(pnlFullLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFullLayout.createSequentialGroup()
-                        .addGroup(pnlFullLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(pnlPlayer2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(pnlPlayer1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(58, 58, 58))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFullLayout.createSequentialGroup()
                         .addComponent(btnGiveUp1)
                         .addGap(73, 73, 73))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFullLayout.createSequentialGroup()
-                        .addComponent(btnGiveUp2)
-                        .addGap(73, 73, 73))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFullLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFullLayout.createSequentialGroup()
+                            .addGap(10, 10, 10)
+                            .addComponent(btnGameOver, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnGiveUp2)
+                            .addGap(73, 73, 73))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFullLayout.createSequentialGroup()
+                            .addGroup(pnlFullLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(pnlPlayer2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(pnlPlayer1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGap(58, 58, 58)))))
         );
         pnlFullLayout.setVerticalGroup(
             pnlFullLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -505,7 +519,9 @@ public class ScreenGame extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(pnlPlayer2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnGiveUp2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(pnlFullLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnGameOver, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnGiveUp2, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE))
                 .addContainerGap(47, Short.MAX_VALUE))
         );
 
@@ -885,6 +901,27 @@ public class ScreenGame extends javax.swing.JFrame {
         ScreenWinner.lblWin.setText(lblName1.getText().toUpperCase() + " " + ScreenWinner.lblWin.getText());
         ScreenWinner.lblWithPts.setText(ScreenWinner.lblWithPts.getText() + " " + lblPoints1.getText() + " points");
     }//GEN-LAST:event_btnGiveUp2ActionPerformed
+
+    private void btnGameOverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGameOverActionPerformed
+        dispose();
+        new ScreenWinner().setVisible(true);
+        if(Integer.parseInt(lblPoints1.getText())>Integer.parseInt(lblPoints2.getText()))
+        {
+            System.out.println(lblName1.getText());
+            ScreenWinner.lblWin.setText(lblName1.getText().toUpperCase() + " " + ScreenWinner.lblWin.getText());
+            ScreenWinner.lblWithPts.setText(ScreenWinner.lblWithPts.getText() + " " + lblPoints1.getText() + " точки");
+            return;
+        }
+        else if (Integer.parseInt(lblPoints1.getText())==Integer.parseInt(lblPoints2.getText())){
+            ScreenWinner.lblWin.setText("Равенство!");
+            ScreenWinner.lblWithPts.setText("");
+        }
+        else {
+            System.out.println(lblName2.getText());
+            ScreenWinner.lblWin.setText(lblName2.getText().toUpperCase() + " " + ScreenWinner.lblWin.getText());
+            ScreenWinner.lblWithPts.setText(ScreenWinner.lblWithPts.getText() + " " + lblPoints2.getText() + " точки");
+        }    
+    }//GEN-LAST:event_btnGameOverActionPerformed
 
     private String getLetterPoints(String letter)
     {
@@ -1345,6 +1382,7 @@ public class ScreenGame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack1;
     private javax.swing.JButton btnBack2;
+    private javax.swing.JButton btnGameOver;
     private javax.swing.JButton btnGiveUp1;
     private javax.swing.JButton btnGiveUp2;
     private javax.swing.JButton btnLegend;
